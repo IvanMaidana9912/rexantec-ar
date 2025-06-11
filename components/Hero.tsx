@@ -23,7 +23,7 @@ export default function Hero() {
           Proveemos garantía total de los equipos y servicios prestados, junto al mejor servicio de atención al cliente, poniendo a su disposición toda nuestra experiencia.
         </p>
         <a
-          href="https://wa.me/5491149912004"
+          href="https://wa.me/+5491158947428"
           className="mt-6 max-w-60 inline-block bg-green-600 hover:bg-green-700 text-white text-xl font-medium px-5 py-2 rounded"
         >
           Chatear con Rexantec
