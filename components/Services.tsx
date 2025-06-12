@@ -24,7 +24,7 @@ export default function Services() {
             />
           </Link>
           {/* Overlay Callout */}
-          <div className="absolute bottom-0 left-1/2 transform w-64 h-auto -translate-x-1/2 bg-red-700/95 text-white uppercase text-sm font-semibold tracking-wider px-8 py-5 rounded-br-full rounded-tl-full text-center">
+          <div className="absolute bottom-0 left-1/2 transform w-52 h-auto -translate-x-1/2 bg-red-700/95 text-white uppercase text-sm font-semibold tracking-wider px-8 py-5 rounded-br-full rounded-tl-full text-center">
             Proyecto Barrio Cerrado Canning
           </div>
         </div>
@@ -33,10 +33,10 @@ export default function Services() {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
             Nuestros servicios
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 h-full items-center gap-x-5">
             {items.map(item => (
               <div key={item.title}>
-                <div className="w-10 h-1 bg-red-600 mb-2" />
+                <div className="w-16 h-1 bg-red-600 mb-2" />
                 <h3 className="text-xl font-semibold text-gray-800 mb-1">
                   {item.title}
                 </h3>
