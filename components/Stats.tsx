@@ -1,20 +1,33 @@
+'use client'
+
 export default function Stats() {
-  const stats = [
-    { label: 'Proyectos Completados', value: 1200 },
-    { label: 'Clientes Satisfechos', value: 950 },
-    { label: 'Técnicos Expertos', value: 15 },
-    { label: 'Años de Experiencia', value: 10 },
+  const items = [
+    { value: '+190', label: 'Instalaciones' },
+    { value: '+54', label: 'Clientes satisfechos' },
+    { value: '20',  label: 'Reseñas en Google' },
+    { value: '+14', label: 'Empresas corporativas' },
   ];
 
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 text-center gap-8">
-        {stats.map(stat => (
-          <div key={stat.label} className="p-6">
-            <h3 className="text-3xl font-bold mb-2">{stat.value}+</h3>
-            <p>{stat.label}</p>
+    <section id="stats" className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div
+          className="bg-[#D6002E] rounded-2xl p-8 md:p-12 mx-auto max-w-5xl"
+          style={{ boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}
+        >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 text-center text-white">
+            {items.map(({ value, label }, i) => (
+              <div key={i}>
+                <div className="text-4xl md:text-5xl font-extrabold leading-none">
+                  {value}
+                </div>
+                <div className="mt-2 text-sm md:text-base font-medium">
+                  {label}
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );

@@ -7,7 +7,7 @@ import {
   Stats,
   Testimonials,
   FAQ,
-  Contact
+  Footer
 } from '../components';
 
 
@@ -20,10 +20,10 @@ export default function Home() {
         <Services />
         <Brands />
         <WhyChooseUs />
-        <Stats />
         <Testimonials />
+        <Stats />
         <FAQ />
-        <Contact />
+        <Footer />
       </main>
     </>
   );
