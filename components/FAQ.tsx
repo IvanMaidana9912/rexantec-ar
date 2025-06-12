@@ -41,9 +41,9 @@ export default function FAQ() {
         <div className="mt-4 w-24 h-1 bg-red-600 mx-auto rounded"></div>
       </div>
 
-      <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
+      <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
         {/* Imagen */}
-        <div className="relative w-full">
+        <div className="relative w-[30rem] ml-auto">
           <Image
             src="/images/pallets-products.png"
             width={600}
