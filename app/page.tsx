@@ -28,5 +28,3 @@ export default function Home() {
     </>
   );
 }
-
-// Nota: Crea los componentes restantes (WhyChooseUs.tsx, Stats.tsx, Testimonials.tsx, FAQ.tsx, Contact.tsx) en la carpeta components/ siguiendo la misma lógica de importación de imágenes desde public/images.
