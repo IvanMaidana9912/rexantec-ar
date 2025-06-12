@@ -24,7 +24,7 @@ export default function Services() {
             />
           </Link>
           {/* Overlay Callout */}
-          <div className="absolute bottom-0 left-1/2 transform w-52 h-auto -translate-x-1/2 bg-red-700/95 text-white uppercase text-sm font-semibold tracking-wider px-8 py-5 rounded-br-full rounded-tl-full text-center">
+          <div className="absolute bottom-0 left-1/2 transform w-64 h-auto -translate-x-1/2 bg-red-700/95 text-white uppercase text-sm font-bold tracking-wider px-12 py-8 rounded-br-full rounded-tl-full text-center">
             Proyecto Barrio Cerrado Canning
           </div>
         </div>

@@ -1,20 +1,51 @@
+'use client'
 import Image from 'next/image';
+
+const logos = [
+  'blue-star',
+  'westric',
+  'hisense',
+  'toshiba',
+  'carrier',
+  'hitachi',
+  'daikin',
+  'tadiran',
+  'lg',
+];
+
 export default function Brands() {
-  const logos = [
-    'blue-star', 'westric', 'hisense', 'toshiba', 'carrier', 'hitachi', 'daikin', 'tadiran', 'lg'
-  ];
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto text-center">
-        <h2 className="text-2xl font-bold mb-8">Marcas que nos acompañan</h2>
-        <div className="flex flex-wrap justify-center gap-6">
-          {logos.map(name => (
-            <div key={name} className="w-24 h-24 relative">
-              <Image src={`/images/brands/${name}.png`} alt={name} fill className="object-contain" />
+    <section id="marcas" className="py-16 bg-gray-100">
+      <div className="mx-auto px-4 lg:px-0 overflow-hidden">
+        <div
+          className="flex items-center space-x-12 w-max"
+          style={{ animation: 'scroll 250s linear infinite' }}
+        >
+          {/* Duplicamos el array para loop continuo */}
+          {[...logos, ...logos].map((name, idx) => (
+            <div key={idx} className="flex-shrink-0 w-52 h-28 relative">
+              <Image
+                src={`/images/brands/${name}.png`}
+                alt={name}
+                fill
+                className="object-contain"
+              />
             </div>
           ))}
         </div>
       </div>
+
+      {/* Keyframes para la animación */}
+      <style jsx global>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 }
