@@ -7,7 +7,8 @@ import {
   Stats,
   Testimonials,
   FAQ,
-  Footer
+  Footer,
+  QuoteCTA
 } from '../components';
 
 
@@ -23,6 +24,7 @@ export default function Home() {
         <Testimonials />
         <Stats />
         <FAQ />
+        <QuoteCTA />
         <Footer />
       </main>
     </>

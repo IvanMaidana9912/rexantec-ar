@@ -38,7 +38,7 @@ export default function FAQ() {
         <p className="mt-2 text-base text-gray-700 max-w-2xl mx-auto">
           No te quedes con dudas; en esta sección podrás ver las consultas más frecuentes que recibimos para que tengas toda la información sobre nuestra forma de trabajar.
         </p>
-        <div className="mt-4 w-24 h-1 bg-red-600 mx-auto rounded"></div>
+        <div className="mt-4 w-60 h-1 bg-red-600 mx-auto rounded"></div>
       </div>
 
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
