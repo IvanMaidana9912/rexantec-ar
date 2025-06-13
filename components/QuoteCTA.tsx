@@ -3,15 +3,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-    FaChevronLeft,
-    FaSignal,
-    FaWifi,
-    FaBatteryFull,
-    FaVideo,
-    FaPhone,
-    FaWhatsapp
-} from 'react-icons/fa';
+import {FaWhatsapp} from 'react-icons/fa';
 
 export default function QuoteCTA() {
     return (
