@@ -34,9 +34,8 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className={`text-2xl font-bold transition-colors duration-300 ${
-              scrolled ? 'text-gray-900' : 'text-white'
-            }`}
+            className={`text-2xl font-bold transition-colors duration-300 ${scrolled ? 'text-gray-900' : 'text-white'
+              }`}
           >
             Rexantec
           </Link>
@@ -70,8 +69,11 @@ export default function Navbar() {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-white z-50"
             aria-label="Abrir menú"
+            className={`
+              md:hidden z-50 transition-colors duration-300
+              ${scrolled ? 'text-gray-900' : 'text-white'}
+            `}
           >
             {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
