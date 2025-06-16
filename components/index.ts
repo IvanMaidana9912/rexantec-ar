@@ -8,3 +8,5 @@ export { default as Testimonials } from './Testimonials';
 export { default as FAQ } from './FAQ';
 export { default as Footer } from './Footer';
 export { default as QuoteCTA } from './QuoteCTA';
+export { default as ClientAOS } from './ClientAOS';
+

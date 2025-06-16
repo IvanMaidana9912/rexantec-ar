@@ -20,14 +20,13 @@ export default function Services() {
           mx-auto md:mx-0 lg:mx-80
         `}
       >
-        {/* Imagen */}
+        {/* Imagen con slide-in desde la izquierda */}
         <div
+          data-aos="fade-right" data-aos-offset="200"
           className={`
             relative flex-shrink-0
-            w-full               /* móvil: 100% ancho */
-            sm:w-[380px]         /* tablets: 380px ancho */
-            h-64                 /* móvil: 16rem alto */
-            sm:h-[598px]         /* tablets+: 598px alto */
+            w-full sm:w-[380px]
+            h-64 sm:h-[598px]
             overflow-hidden mx-auto rounded-2xl
           `}
         >
@@ -40,8 +39,10 @@ export default function Services() {
             />
           </Link>
 
-          {/* Callout */}
+          {/* Callout (puedes animar separado si quieres) */}
           <div
+            data-aos="fade-up"
+            data-aos-delay="200"
             className={`
               absolute bottom-6 sm:bottom-10 left-1/2
               transform sm:-translate-x-1/2 -translate-x-48 translate-y-1/2
@@ -49,7 +50,6 @@ export default function Services() {
               px-6 sm:px-12 py-4 sm:py-8
               w-[240px] sm:w-64
               rounded-br-full rounded-tl-full
-        
               text-center
             `}
           >
@@ -57,14 +57,18 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Texto de servicios */}
-        <div className="w-full md:w-7/12 flex h-auto flex-col justify-between items-start">
+        {/* Texto con slide-in desde la derecha */}
+        <div
+          data-aos="fade-left"
+          data-aos-delay="100"
+          className="w-full md:w-7/12 flex h-auto flex-col justify-between items-start"
+        >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
             Nuestros servicios
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-8 h-full items-center">
-            {items.map((item) => (
-              <div key={item.title}>
+            {items.map((item, i) => (
+              <div key={item.title} data-aos="fade-up" data-aos-delay={`${200 + i * 100}`}>
                 <div className="w-12 sm:w-16 h-1 bg-red-600 mb-2" />
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-1">
                   {item.title}

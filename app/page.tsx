@@ -7,8 +7,8 @@ import {
   Stats,
   Testimonials,
   FAQ,
+  QuoteCTA,
   Footer,
-  QuoteCTA
 } from '../components';
 
 

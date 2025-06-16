@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link';
-import { FaFacebookF, FaEnvelope, FaInstagram, FaTiktok, FaPhone } from 'react-icons/fa';
+import { FaFacebookF, FaEnvelope, FaInstagram, FaTiktok, FaPhone, FaWhatsapp, FaInfo } from 'react-icons/fa';
+import { FaLocationPin } from 'react-icons/fa6';
 
 export default function Footer() {
   return (
@@ -21,21 +22,21 @@ export default function Footer() {
         {/* 1: Contacto */}
         <div className="space-y-3 text-center md:text-left">
           <h3 className="text-xl font-bold mb-2">Info de contacto</h3>
-          <p>CABA, Argentina</p>
+          <p className='inline-flex items-center'><FaLocationPin className="mr-2" /> Bernal Oeste, Zona Sur, Argentina</p>
           <p>
             <Link
               href="mailto:instalaciones@rexantec.com.ar"
-              className="underline hover:text-red-100 transition"
+              className="hover:text-red-100 transition"
             >
-              instalaciones@rexantec.com.ar
+              <FaInfo className="mr-2 inline-flex items-center" /> instalaciones@rexantec.com.ar
             </Link>
           </p>
           <p>
             <Link
               href="tel:+5491158947428"
-              className="inline-flex items-center underline hover:text-red-100 transition"
+              className="inline-flex items-center hover:text-red-100 transition"
             >
-              <FaPhone className="mr-2" /> +54 9 11 5894 7428
+              <FaWhatsapp className="mr-2 " /> +54 9 11 5894 7428
             </Link>
           </p>
         </div>
@@ -45,10 +46,10 @@ export default function Footer() {
           <h3 className="text-xl font-bold mb-2">Servicios</h3>
           <ul className="space-y-2">
             {[
-              { href: '#reparaciones', text: 'Reparaciones' },
               { href: '#instalaciones', text: 'Instalaciones' },
               { href: '#mantenimiento', text: 'Mantenimiento' },
-              { href: '#productos', text: 'Productos' },
+              { href: '#reparaciones', text: 'Reparaciones' },
+              // { href: '#productos', text: 'Productos' },
             ].map((item) => (
               <li key={item.href}>
                 <Link

@@ -32,8 +32,10 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="py-16">
-      {/* Cabecera */}
-      <div className="text-center mb-12 px-4 sm:px-6 lg:px-0">
+      <div
+        className="text-center mb-12 px-4 sm:px-6 lg:px-0"
+        data-aos="fade-left"
+      >
         <h2 className="text-3xl font-bold">Preguntas frecuentes</h2>
         <p className="mt-2 text-base text-gray-700 max-w-2xl mx-auto">
           No te quedes con dudas; en esta sección podrás ver las consultas más
@@ -42,11 +44,17 @@ export default function FAQ() {
         </p>
         <div className="mt-4 w-60 h-1 bg-red-600 mx-auto rounded" />
       </div>
-
-      {/* Grid: 1 columna en móvil, 2 en md+ */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-0 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div
+        className="container mx-auto px-4 sm:px-6 lg:px-0 grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+        data-aos="fade-left"
+        data-aos-delay="200"
+      >
         {/* Imagen */}
-        <div className="w-full max-w-md mx-auto lg:ml-auto md:mx-0 md:w-[30rem]">
+        <div
+          className="w-full max-w-md mx-auto lg:ml-auto md:mx-0 md:w-[30rem]"
+          data-aos="fade-left"
+          data-aos-delay="300"
+        >
           <Image
             src="/images/pallets-products.png"
             width={600}
@@ -59,9 +67,12 @@ export default function FAQ() {
             "
           />
         </div>
-
         {/* Acordeón */}
-        <div className="w-full max-w-md mx-auto md:mx-0 md:max-w-none border border-gray-200 rounded-lg overflow-hidden">
+        <div
+          className="w-full max-w-md mx-auto md:mx-0 md:max-w-none border border-gray-200 rounded-lg overflow-hidden"
+          data-aos="fade-left"
+          data-aos-delay="400"
+        >
           {faqItems.map((item, idx) => {
             const isOpen = openIndex === idx;
             return (
@@ -84,8 +95,6 @@ export default function FAQ() {
                     {item.question}
                   </span>
                 </button>
-
-                {/* Respuesta con slide */}
                 <div
                   className={`
                     overflow-hidden bg-white text-gray-700
@@ -96,8 +105,6 @@ export default function FAQ() {
                 >
                   <div className="text-base">{item.answer}</div>
                 </div>
-
-                {/* Separador */}
                 {idx < faqItems.length - 1 && (
                   <div className="border-t border-gray-200"></div>
                 )}
