@@ -4,22 +4,33 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-const NAV_LINKS = [
-  { href: '#inicio', label: 'Inicio' },
+// 1. Define la forma de cada elemento de navegación
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+// 2. Declara y tipa tu array de links fuera del componente
+const NAV_LINKS: NavLink[] = [
+  { href: '#inicio',    label: 'Inicio' },
   { href: '#servicios', label: 'Servicios' },
-  { href: '#nosotros', label: 'Nosotros' },
-  { href: '#contacto', label: 'Contacto' },
+  { href: '#nosotros',  label: 'Nosotros' },
+  { href: '#contacto',  label: 'Contacto' },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
+    requestAnimationFrame(() => {
+      setMounted(true);
+      const onScroll = () => setScrolled(window.scrollY > 50);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+      return () => window.removeEventListener('scroll', onScroll);
+    });
   }, []);
 
   return (
@@ -34,8 +45,12 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className={`text-2xl font-bold transition-colors duration-300 ${scrolled ? 'text-gray-900' : 'text-white'
-              }`}
+            className="
+              text-2xl font-bold transition-all duration-500
+              bg-gradient-to-r from-[#0F446C] via-[#8F7D81] to-[#E22128]
+              bg-[length:200%_100%] bg-left bg-clip-text text-transparent
+              hover:bg-right
+            "
           >
             Rexantec
           </Link>
@@ -48,10 +63,9 @@ export default function Navbar() {
                 href={href}
                 className={`
                   px-2 py-1 font-medium border-b-2 border-transparent
-                  transition-border duration-[330ms]
-                  ${scrolled
-                    ? 'text-gray-800 hover:border-gray-800'
-                    : 'text-white hover:border-white'}
+                  transition-all duration-[330ms]
+                  ${!mounted || !scrolled ? 'text-white' : 'text-gray-800'}
+                  hover:text-[#E22128] hover:border-[#E22128]
                 `}
               >
                 {label}
@@ -72,7 +86,7 @@ export default function Navbar() {
             aria-label="Abrir menú"
             className={`
               md:hidden z-50 transition-colors duration-300
-              ${scrolled ? 'text-gray-900' : 'text-white'}
+              ${!mounted || !scrolled ? 'text-white' : 'text-gray-900'}
             `}
           >
             {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}

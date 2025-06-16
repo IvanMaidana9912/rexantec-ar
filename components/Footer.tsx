@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link';
-import { FaFacebookF, FaEnvelope, FaInstagram, FaTiktok, FaWhatsapp, FaInfo } from 'react-icons/fa';
+import { FaFacebookF, FaEnvelope, FaInstagram, FaTiktok, FaWhatsapp, FaInfo, FaYoutube } from 'react-icons/fa';
 import { FaLocationPin } from 'react-icons/fa6';
 
 export default function Footer() {
@@ -22,7 +22,7 @@ export default function Footer() {
         {/* 1: Contacto */}
         <div className="space-y-3 text-center md:text-left">
           <h3 className="text-xl font-bold mb-2">Info de contacto</h3>
-          <p className='inline-flex items-center'><FaLocationPin className="mr-2" /> Bernal Oeste, Zona Sur, Argentina</p>
+          <p className='inline-flex items-center'><FaLocationPin className="mr-2" /> Bernal Oeste, Zona Sur, Argentina.</p>
           <p>
             <Link
               href="mailto:instalaciones@rexantec.com.ar"
@@ -73,6 +73,7 @@ export default function Footer() {
               { icon: FaEnvelope, href: 'mailto:instalaciones@rexantec.com.ar', label: 'Email' },
               { icon: FaInstagram, href: 'https://instagram.com', label: 'Instagram' },
               { icon: FaTiktok, href: 'https://tiktok.com', label: 'TikTok' },
+              { icon: FaYoutube, href: 'https://youtube.com', label: 'Youtube' },
             ].map(({ icon: Icon, href, label }, i) => (
               <Link
                 key={i}
