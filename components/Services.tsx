@@ -53,7 +53,7 @@ export default function Services() {
               text-center
             `}
           >
-            Proyecto Barrio Cerrado Canning
+            Desmatelación Fresca Pastas
           </div>
         </div>
 

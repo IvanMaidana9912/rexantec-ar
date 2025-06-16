@@ -56,13 +56,13 @@ export default function FAQ() {
           data-aos-delay="300"
         >
           <Image
-            src="/images/pallets-products.png"
+            src="/images/products.jpg"
             width={600}
             height={450}
             alt="FAQs"
             className="
               w-full h-auto object-cover
-              rounded-tl-[100px] rounded-bl-[100px]
+              rounded-tr-[100px] rounded-bl-[100px]
               border border-gray-200
             "
           />

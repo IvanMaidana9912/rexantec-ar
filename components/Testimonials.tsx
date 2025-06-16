@@ -17,8 +17,8 @@ export default function Testimonials() {
           >
             <Link href="/" className="block w-full h-full">
               <Image
-                src="/images/photo-bgh.jpg"
-                alt="Showroom BGH"
+                src="/images/photo-m.jpg"
+                alt="Mantenimientos"
                 fill
                 className="object-cover rounded-xl"
               />
@@ -27,12 +27,12 @@ export default function Testimonials() {
               className="
                 absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2
                 bg-red-600 text-white uppercase text-xs font-semibold tracking-wider
-                px-3 py-2 rounded-br-full rounded-tl-full
+                px-6 py-2 rounded-br-full rounded-tl-full
               "
               data-aos="fade-right"
               data-aos-delay="200"
             >
-              Showroom BGH
+              Mantenimientos
             </div>
           </div>
           {/* Tarjeta de vídeo */}
@@ -53,7 +53,7 @@ export default function Testimonials() {
               className="
                 absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2
                 bg-red-600 text-white uppercase text-xs font-semibold tracking-wider
-                px-3 py-2 rounded-br-full rounded-tl-full
+                px-6 py-2 rounded-br-full rounded-tl-full
               "
               data-aos="fade-right"
               data-aos-delay="400"
