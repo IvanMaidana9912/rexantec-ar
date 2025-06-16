@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link';
-import { FaFacebookF, FaEnvelope, FaInstagram, FaTiktok, FaPhone, FaWhatsapp, FaInfo } from 'react-icons/fa';
+import { FaFacebookF, FaEnvelope, FaInstagram, FaTiktok, FaWhatsapp, FaInfo } from 'react-icons/fa';
 import { FaLocationPin } from 'react-icons/fa6';
 
 export default function Footer() {

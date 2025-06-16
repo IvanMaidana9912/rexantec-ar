@@ -1,51 +1,43 @@
-'use client';
+'use client'
 
-import { useRef } from 'react';
-import { useCountUp } from './hooks/useCountUp';
-import { useInView } from './hooks/useInView';
-
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 
 export default function Stats() {
   const items = [
-    { value: '+190', label: 'Instalaciones' },
-    { value: '+54', label: 'Clientes satisfechos' },
-    { value: '20',  label: 'Reseñas en Google' },
-    { value: '+14', label: 'Empresas corporativas' },
+    { end: 190, suffix: '+', label: 'Instalaciones' },
+    { end: 54,  suffix: '+', label: 'Clientes satisfechos' },
+    { end: 20,  suffix: '',  label: 'Reseñas en Google' },
+    { end: 14,  suffix: '+', label: 'Empresas corporativas' },
   ];
 
-  // Ref para la sección y detectar cuando entra en viewport
-  const sectionRef = useRef<HTMLElement>(null);
-  const inView = useInView(sectionRef, { threshold: 0.3, triggerOnce: true });
+  // Cuando el 30% de la sección sea visible, dispara solo una vez
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
 
   return (
-    <section id="stats" ref={sectionRef} className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="stats" ref={ref} className="py-16 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-0">
         <div
-          className="bg-[#D6002E] rounded-2xl p-8 md:p-12 mx-auto max-w-5xl"
-          style={{ boxShadow: '0 4px 8px rgba(0,0,0,0.1)' }}
+          className="bg-[#D6002E] rounded-2xl p-6 sm:p-8 md:p-12 mx-auto max-w-5xl shadow-lg"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 text-center text-white">
-            {items.map(({ value, label }, i) => {
-              // Extraemos el número y el sufijo
-              const end = parseInt(value.replace(/\D/g, ''), 10);
-              const suffixMatch = value.match(/[^0-9]+$/);
-              const suffix = suffixMatch ? suffixMatch[0] : '';
-
-              // Hook count-up
-              const count = useCountUp(end, 2000, inView);
-
-              return (
-                <div key={i}>
-                  <div className="text-4xl md:text-5xl font-extrabold leading-none">
-                    {inView ? `+${count}` : 0}
-                    {suffix}
-                  </div>
-                  <div className="mt-2 text-sm md:text-base font-medium">
-                    {label}
-                  </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+            {items.map(({ end, suffix, label }, i) => (
+              <div key={i}>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-none">
+                  {inView ? (
+                    <CountUp end={end} duration={2} suffix={suffix} />
+                  ) : (
+                    `0${suffix}`
+                  )}
                 </div>
-              );
-            })}
+                <div className="mt-2 text-sm sm:text-base font-medium">
+                  {label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
