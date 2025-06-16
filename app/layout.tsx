@@ -52,6 +52,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="es-419">
+      <head>
+        <link rel="apple-touch-icon" href="@/images/profile.png" />
+      </head>
       <body>
         <ClientAOS />
         {children}
