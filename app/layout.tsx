@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="apple-touch-icon" href="@/images/profile.png" />
       </head>
-      <body className="overflow-x-hidden">
+      <body className="bg-[#0f446ca1]">
         <ClientAOS />
         {children}
       </body>

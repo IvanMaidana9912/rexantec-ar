@@ -4,20 +4,20 @@ import Image from 'next/image';
 
 export default function WhyChooseUs() {
   return (
-    <section id="nosotros" className="py-16 bg-white">
+    <section id="nosotros" className="py-16 bg-[#0f446ca1]">
       <div
         className="container mx-auto max-w-screen-md px-4 sm:px-6 lg:px-0 text-center"
         data-aos="fade-left"
       >
         <h2
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-4"
           data-aos="fade-left"
           data-aos-delay="100"
         >
           ¿Por qué elegirnos?
         </h2>
         <p
-          className="mx-auto max-w-3xl text-gray-700 mb-6 font-semibold text-base sm:text-lg"
+          className="mx-auto max-w-3xl text-white mb-6 font-semibold text-base sm:text-lg"
           data-aos="fade-left"
           data-aos-delay="200"
         >
@@ -26,7 +26,7 @@ export default function WhyChooseUs() {
           decoración.
         </p>
         <div
-          className="mx-auto mb-16 h-1 bg-red-600 w-16 sm:w-32 md:w-48 lg:w-72"
+          className="mx-auto mb-16 h-1 bg-[#E22128] w-16 sm:w-32 md:w-48 lg:w-72"
           data-aos="fade-left"
           data-aos-delay="300"
         />
@@ -58,7 +58,7 @@ export default function WhyChooseUs() {
           ].map(({ icon, title, desc }, i) => (
             <div
               key={title}
-              className="border-2 border-red-600 rounded-xl p-6 hover:shadow-lg transition"
+              className="border-2 border-[#E22128] rounded-xl p-6 hover:shadow-lg transition"
               data-aos="fade-left"
               data-aos-delay={`${500 + i * 100}`}
             >
@@ -69,10 +69,10 @@ export default function WhyChooseUs() {
                 height={48}
                 className="mx-auto mb-4"
               />
-              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-lg sm:text-xl font-semibold text-black mb-2">
                 {title}
               </h3>
-              <p className="text-sm sm:text-base text-gray-600">{desc}</p>
+              <p className="text-sm sm:text-base text-white">{desc}</p>
             </div>
           ))}
         </div>

@@ -8,14 +8,14 @@ export default function QuoteCTA() {
   return (
     <section
       id="contacto"
-      className="relative bg-[#D6002E] overflow-hidden rounded-xl py-16"
+      className="relative bg-[#E22128] w-auto overflow-hidden py-16"
     >
       <div
-        className="hidden md:block h-48 lg:h-60 w-full bg-white absolute top-0"
+        className="hidden md:block h-48 lg:h-60 w-full bg-[#0f446c] absolute top-0"
 
       />
       <div
-        className="container mx-auto px-4 flex flex-col-reverse lg:flex-row-reverse md:flex-row items-center bg-transparent"
+        className="container mx-auto flex flex-col-reverse lg:flex-row-reverse md:flex-row items-center bg-transparent"
         data-aos="fade-right"
         data-aos-delay="200"
       >
@@ -24,7 +24,7 @@ export default function QuoteCTA() {
           data-aos="fade-right"
           data-aos-delay="300"
         >
-          <div className="relative w-[20rem] h-[40rem]">
+          <div className="relative w-[19rem] h-[40rem]">
             <Image
               src="/images/iphone-frame.png"
               alt="iPhone 16 Frame"
@@ -35,7 +35,7 @@ export default function QuoteCTA() {
           </div>
         </div>
         <div
-          className="md:w-full justify-center text-white md:pl-48 flex flex-col"
+          className="md:w-full justify-center text-white px-8 md:pl-48 flex flex-col"
           data-aos="fade-right"
           data-aos-delay="400"
         >
@@ -60,7 +60,7 @@ export default function QuoteCTA() {
         </div>
       </div>
       <div
-        className="absolute bottom-0 w-full bg-white h-32 lg:h-60 sm:h-36"
+        className="absolute bottom-0 w-full bg-[#0f446c] h-32 lg:h-60 sm:h-36"
 
       />
     </section>

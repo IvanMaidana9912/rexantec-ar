@@ -6,7 +6,7 @@ import { FaLocationPin } from 'react-icons/fa6';
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#D6002E] text-white pt-12">
+    <footer className="relative bg-[#E22128] text-white pt-12">
       {/* Divisor curvo blanco */}
       <div className="absolute top-0 left-0 right-0 -mt-1 overflow-hidden pointer-events-none">
         <svg
@@ -14,7 +14,7 @@ export default function Footer() {
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
         >
-          <path d="M1200 0L0 0 892.25 114.72 1200 0z" fill="#ffffff" />
+          <path d="M1200 0L0 0 892.25 114.72 1200 0z" fill="#0f446c" />
         </svg>
       </div>
 
@@ -54,7 +54,7 @@ export default function Footer() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="inline-block pb-1 border-b-2 border-transparent hover:border-white transition"
+                  className="inline-block pb-1 border-b-2 border-transparent hover:border-[#0f446ca1] transition"
                 >
                   {item.text}
                 </Link>
@@ -79,7 +79,7 @@ export default function Footer() {
                 key={i}
                 href={href}
                 aria-label={label}
-                className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#D6002E] hover:bg-red-100 transition"
+                className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#E22128] hover:bg-[#0f446c] transition"
                 target={href.startsWith('http') ? '_blank' : undefined}
               >
                 <Icon size={18} />
@@ -90,7 +90,7 @@ export default function Footer() {
       </div>
 
       {/* Pie de página */}
-      <div className="border-t border-red-400 opacity-50"></div>
+      <div className="border-t border-[#E22128] opacity-50"></div>
       <div className="text-center text-sm text-red-200 py-6">
         © {new Date().getFullYear()} Rexantec. Todos los derechos reservados.
       </div>

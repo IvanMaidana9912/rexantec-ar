@@ -9,7 +9,7 @@ export default function Hero() {
       className="
         relative overflow-hidden 
         h-[75vh] md:h-screen min-h-[500px] 
-        rounded-br-[200px]
+        rounded-br-[200px] bg-[#0f446ca1]
       "
     >
       {/* Imagen de fondo */}
@@ -21,7 +21,7 @@ export default function Hero() {
       />
 
       {/* Overlay para contraste */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* Contenido */}
       <div

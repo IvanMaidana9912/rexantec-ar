@@ -18,10 +18,10 @@ export default function Stats() {
   });
 
   return (
-    <section id="stats" ref={ref} className="py-16 bg-white">
+    <section id="stats" ref={ref} className="py-16 bg-[#0f446ca1]">
       <div className="container mx-auto px-4 sm:px-6 lg:px-0">
         <div
-          className="bg-[#D6002E] rounded-2xl p-6 sm:p-8 md:p-12 mx-auto max-w-5xl shadow-lg"
+          className="bg-[#E22128] rounded-2xl p-6 sm:p-8 md:p-12 mx-auto max-w-5xl shadow-lg"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
             {items.map(({ end, suffix, label }, i) => (

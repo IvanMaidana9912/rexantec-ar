@@ -12,12 +12,12 @@ export default function Services() {
   ];
 
   return (
-    <section id="servicios" className="py-24 bg-white">
+    <section id="servicios" className="py-24 bg-[#0f446ca1]">
       <div
         className={`
           flex flex-col md:flex-row gap-12
-          px-4 sm:px-6 md:px-8 lg:px-6 xl:px-0
-          mx-auto md:mx-0 lg:mx-80
+          px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0
+          mx-auto md:mx-0 lg:mx-20 xl:mx-80
         `}
       >
         {/* Imagen con slide-in desde la izquierda */}
@@ -46,7 +46,7 @@ export default function Services() {
             className={`
               absolute bottom-6 sm:bottom-10 left-1/2
               transform sm:-translate-x-1/2 -translate-x-48 translate-y-1/2
-              bg-red-700/95 text-white uppercase text-sm font-bold tracking-wider
+              bg-[#E22128] text-white uppercase text-sm font-bold tracking-wider
               px-6 sm:px-12 py-4 sm:py-8
               w-[240px] sm:w-64
               rounded-br-full rounded-tl-full
@@ -69,11 +69,11 @@ export default function Services() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-8 h-full items-center">
             {items.map((item, i) => (
               <div key={item.title} data-aos="fade-up" data-aos-delay={`${200 + i * 100}`}>
-                <div className="w-12 sm:w-16 h-1 bg-red-600 mb-2" />
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-1">
+                <div className="w-12 sm:w-16 h-1 bg-[#E22128] mb-2" />
+                <h3 className="text-lg sm:text-xl font-semibold text-black mb-1">
                   {item.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600">
+                <p className="text-sm sm:text-base text-white">
                   {item.description}
                 </p>
               </div>

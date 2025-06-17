@@ -37,12 +37,12 @@ export default function FAQ() {
         data-aos="fade-left"
       >
         <h2 className="text-3xl font-bold">Preguntas frecuentes</h2>
-        <p className="mt-2 text-base text-gray-700 max-w-2xl mx-auto">
+        <p className="mt-2 text-base text-white max-w-2xl mx-auto">
           No te quedes con dudas; en esta sección podrás ver las consultas más
           frecuentes que recibimos para que tengas toda la información sobre
           nuestra forma de trabajar.
         </p>
-        <div className="mt-4 w-60 h-1 bg-red-600 mx-auto rounded" />
+        <div className="mt-4 w-60 h-1 bg-[#E22128] mx-auto rounded" />
       </div>
       <div
         className="container mx-auto px-4 sm:px-6 lg:px-0 grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
@@ -84,7 +84,7 @@ export default function FAQ() {
                 >
                   <span
                     className={`flex items-center text-lg font-semibold ${
-                      isOpen ? 'text-red-600' : 'text-gray-800'
+                      isOpen ? 'text-[#E22128]' : 'text-gray-800'
                     }`}
                   >
                     {isOpen ? (
@@ -106,7 +106,7 @@ export default function FAQ() {
                   <div className="text-base">{item.answer}</div>
                 </div>
                 {idx < faqItems.length - 1 && (
-                  <div className="border-t border-gray-200"></div>
+                  <div className="border-t border-[#0f446ca1]"></div>
                 )}
               </div>
             );
