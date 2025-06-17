@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-export default function Hero() {
+export default function Hero({imgHREF}: {imgHREF: string}) {
   return (
     <section
       id="inicio"
@@ -14,7 +14,7 @@ export default function Hero() {
     >
       {/* Imagen de fondo */}
       <Image
-        src="/images/Group-200.png"
+        src={`/images/${imgHREF}`}
         alt="Climatización MCE Hero"
         fill
         className="object-cover"

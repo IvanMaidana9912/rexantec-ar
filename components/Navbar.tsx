@@ -12,10 +12,10 @@ interface NavLink {
 
 // 2. Declara y tipa tu array de links fuera del componente
 const NAV_LINKS: NavLink[] = [
-  { href: '#inicio',    label: 'Inicio' },
-  { href: '#servicios', label: 'Servicios' },
-  { href: '#nosotros',  label: 'Nosotros' },
-  { href: '#contacto',  label: 'Contacto' },
+  { href: '/#inicio',    label: 'Inicio' },
+  { href: '/#servicios', label: 'Servicios' },
+  { href: '/#nosotros',  label: 'Nosotros' },
+  { href: '/#contacto',  label: 'Contacto' },
 ];
 
 export default function Navbar() {
