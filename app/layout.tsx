@@ -54,6 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es-419">
       <head>
         <link rel="apple-touch-icon" href="https://i.imgur.com/oRe3rLg.png" />
+        <link rel="icon" href="https://i.imgur.com/oRe3rLg.png" type="image/x-png" />
       </head>
       <body className="bg-[#0f446ca1]">
         <ClientAOS />
