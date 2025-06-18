@@ -18,7 +18,7 @@ const faqItems = [
   {
     question: '¿Se cobra la visita?',
     answer:
-      'Nuestra primera visita es sin cargo dentro de Capital Federal. Si estás por los alrededores, evaluaremos tu caso de manera personalizada.',
+      'Sí, nuestra visita técnica contempla un valor que cubre diagnóstico, asesoramiento profesional y traslado, y puede ser bonificado si se contrata el servicio.',
   },
   {
     question: '¿Qué tipo de instalaciones hacemos?',

@@ -5,10 +5,10 @@ import { useInView } from 'react-intersection-observer';
 
 export default function Stats() {
   const items = [
-    { end: 190, suffix: '+', label: 'Instalaciones' },
-    { end: 54,  suffix: '+', label: 'Clientes satisfechos' },
-    { end: 20,  suffix: '',  label: 'Reseñas en Google' },
-    { end: 14,  suffix: '+', label: 'Empresas corporativas' },
+    { end: 250, suffix: '+', label: 'Instalaciones' },
+    { end: 160,  suffix: '+', label: 'Clientes satisfechos' },
+    { end: 15,  suffix: '',  label: 'Reseñas en Google' },
+    { end: 7,  suffix: '+', label: 'Empresas corporativas' },
   ];
 
   // Cuando el 30% de la sección sea visible, dispara solo una vez
