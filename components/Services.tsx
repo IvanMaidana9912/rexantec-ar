@@ -17,7 +17,7 @@ export default function Services() {
         className={`
           flex flex-col md:flex-row gap-12
           px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0
-          mx-auto md:mx-0 lg:mx-20 xl:mx-80
+          mx-auto
         `}
       >
         {/* Imagen con slide-in desde la izquierda */}
@@ -27,7 +27,7 @@ export default function Services() {
             relative flex-shrink-0
             w-full sm:w-[380px]
             h-64 sm:h-[598px]
-            overflow-hidden mx-auto rounded-2xl
+            overflow-hidden mx-auto rounded-2xl flex justify-center
           `}
         >
           <Link href="/proyectos" className="w-[380px] h-[555px] absolute rounded-xl">
@@ -63,10 +63,10 @@ export default function Services() {
           data-aos-delay="100"
           className="w-full md:w-7/12 flex h-auto flex-col justify-between items-start"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
-            Nuestros servicios
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 lg:mb-20">
+            Nuestros Servicios
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-8 h-full items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-8 h-full items-start max-w-auto lg:max-w-full xl:max-w-9/12">
             {items.map((item, i) => (
               <div key={item.title} data-aos="fade-up" data-aos-delay={`${200 + i * 100}`}>
                 <div className="w-12 sm:w-16 h-1 bg-[#E22128] mb-2" />
