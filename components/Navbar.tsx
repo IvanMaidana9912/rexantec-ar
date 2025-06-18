@@ -45,7 +45,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className={`${!menuOpen ? 'hidden' : 'block'}`}/>
           <Link
-            href="#"
+            href="/#"
             className="
               text-2xl font-bold transition-all duration-500
               bg-gradient-to-r from-[#0F446C] via-[#8F7D81] to-[#E22128]
