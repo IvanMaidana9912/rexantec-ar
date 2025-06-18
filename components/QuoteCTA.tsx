@@ -26,7 +26,7 @@ export default function QuoteCTA() {
         >
           <div className="relative w-[19rem] h-[40rem]">
             <Image
-              src="/images/iphone-frame.png"
+              src="/images/iphone-frame02.png"
               alt="iPhone 16 Frame"
               fill
               className="object-contain"
