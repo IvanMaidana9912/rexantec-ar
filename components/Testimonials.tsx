@@ -21,7 +21,7 @@ export default function Testimonials() {
             data-aos="fade-right"
             data-aos-delay="100"
           >
-            <Link href="/" className="block w-full h-full">
+            <Link href="/mantenimientos" className="block w-full h-full">
               <Image
                 src="/images/photo-m.jpg"
                 alt="Mantenimientos"

@@ -38,19 +38,21 @@ export default function Navbar() {
       <nav
         className={`
           fixed inset-x-0 top-0 z-50 transition-colors duration-300
-          ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}
+          ${scrolled && !menuOpen ? 'bg-white shadow-md' : 'bg-transparent'}
         `}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 h-16 flex items-center justify-between">
           {/* Logo */}
+          <div className={`${!menuOpen ? 'hidden' : 'block'}`}/>
           <Link
-            href="/"
+            href="#"
             className="
               text-2xl font-bold transition-all duration-500
               bg-gradient-to-r from-[#0F446C] via-[#8F7D81] to-[#E22128]
               bg-[length:200%_100%] bg-left bg-clip-text text-transparent
               hover:bg-right
             "
+            onClick={() => setMenuOpen(false)}
           >
             Rexantec
           </Link>
@@ -86,7 +88,7 @@ export default function Navbar() {
             aria-label="Abrir menú"
             className={`
               md:hidden z-50 transition-colors duration-300
-              ${!mounted || !scrolled ? 'text-white' : 'text-gray-900'}
+              ${menuOpen ? 'text-transparent' : !mounted || !scrolled ? 'text-white' : 'text-gray-900'}
             `}
           >
             {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -98,10 +100,11 @@ export default function Navbar() {
       <div
         className={`
           fixed inset-0 z-40 transition-transform duration-300
-          md:hidden bg-black bg-opacity-70 backdrop-blur-sm
+          md:hidden bg-black/30 bg-opacity-70 backdrop-blur-sm select-none
           ${menuOpen ? 'translate-x-0' : 'translate-x-full'}
         `}
       >
+        <Link href={'/#inicio'} className='absolute top-0 bottom-0 left-0 right-0 bg-transparent h-screen w-screen' onClick={() => setMenuOpen(false)}/>
         <div className="absolute top-0 right-0 w-3/4 max-w-xs h-full bg-white shadow-lg p-6 flex flex-col">
           {/* Close */}
           <button

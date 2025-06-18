@@ -2,6 +2,3 @@
 @tailwind utilities;
 @import 'aos/dist/aos.css';
 
-html {
-  font-family: 'Poppins', sans-serif;
-}

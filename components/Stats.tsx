@@ -19,7 +19,7 @@ export default function Stats() {
 
   return (
     <section id="stats" ref={ref} className="py-16 bg-[#0f446ca1]">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-0">
+      <div className="container mx-auto px-28 sm:px-20 lg:px-0">
         <div
           className="bg-[#E22128] rounded-2xl p-6 sm:p-8 md:p-12 mx-auto max-w-5xl shadow-lg"
         >

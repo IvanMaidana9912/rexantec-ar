@@ -1,19 +1,29 @@
 'use client'
 
-import Link from "next/link"
+import Image from 'next/image';
 
-export default function Gallery() {
-    return (
-        <>
-            <section className="h-auto container grid grid-cols-3 text-center items-center text-white font-bold mx-auto gap-16 my-20">
-                <Link href={'/'} className="px-5 py-36 border-red-800  rounded-2xl border-2"><h1>01</h1></Link>
-                <Link href={'/'} className="px-5 py-36 border-red-800  rounded-2xl border-2"><h1>02</h1></Link>
-                <Link href={'/'} className="px-5 py-36 border-red-800  rounded-2xl border-2"><h1>03</h1></Link>
-                <Link href={'/'} className="px-5 py-36 border-red-800  rounded-2xl border-2"><h1>04</h1></Link>
-                <Link href={'/'} className="px-5 py-36 border-red-800  rounded-2xl border-2"><h1>05</h1></Link>
-                <Link href={'/'} className="px-5 py-36 border-red-800  rounded-2xl border-2"><h1>06</h1></Link>
-                <Link href={'/'} className="px-5 py-36 border-red-800  rounded-2xl border-2"><h1>07</h1></Link>
-            </section>
-        </>
-    )
-};
+export interface ImagesArray {
+  SrcI: string;
+  AltI: string;
+}
+
+interface GalleryProps {
+  images: ImagesArray[];
+}
+
+export default function Gallery({ images }: GalleryProps) {
+  return (
+    <section className="container mx-auto my-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 text-center text-white font-bold">
+      {images.map((img, i) => (
+        <Image
+          key={i}
+          src={img.SrcI}
+          alt={img.AltI}
+          width={200}
+          height={130}
+          className="w-full rounded-2xl border-2 border-red-800"
+        />
+      ))}
+    </section>
+  );
+}

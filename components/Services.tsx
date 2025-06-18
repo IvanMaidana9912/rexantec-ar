@@ -30,7 +30,7 @@ export default function Services() {
             overflow-hidden mx-auto rounded-2xl
           `}
         >
-          <Link href="/fresca" className="w-[380px] h-[555px] absolute rounded-xl">
+          <Link href="/proyectos" className="w-[380px] h-[555px] absolute rounded-xl">
             <Image
               src="/images/image-40.jpg"
               alt="Instalación de equipos"
@@ -53,7 +53,7 @@ export default function Services() {
               text-center
             `}
           >
-            Desmatelación Fresca Pastas
+            Proyecto Desmontaje
           </div>
         </div>
 

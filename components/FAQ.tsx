@@ -83,14 +83,14 @@ export default function FAQ() {
                   className="w-full flex items-center justify-between px-6 py-4 bg-white hover:bg-gray-50 transition"
                 >
                   <span
-                    className={`flex items-center text-lg font-semibold ${
+                    className={`flex items-center text-start text-lg font-semibold ${
                       isOpen ? 'text-[#E22128]' : 'text-gray-800'
                     }`}
                   >
                     {isOpen ? (
-                      <FaTimes className="mr-2" />
+                      <FaTimes className="mr-6" />
                     ) : (
-                      <FaPlus className="mr-2" />
+                      <FaPlus className="mr-6" />
                     )}
                     {item.question}
                   </span>
