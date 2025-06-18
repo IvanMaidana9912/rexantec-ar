@@ -25,10 +25,10 @@ export default function Footer() {
           <p className='inline-flex items-center'><FaLocationPin className="mr-2" /> Bernal Oeste, Zona Sur, Argentina.</p>
           <p>
             <Link
-              href="mailto:instalaciones@rexantec.com.ar"
+              href="mailto:rexantecservicios@gmail.com.ar"
               className="hover:text-red-100 transition"
             >
-              <FaInfo className="mr-2 inline-flex items-center" /> instalaciones@rexantec.com.ar
+              <FaInfo className="mr-2 inline-flex items-center" /> rexantecservicios@gmail.com.ar
             </Link>
           </p>
           <p>
@@ -69,11 +69,11 @@ export default function Footer() {
           <p>Encontranos en redes sociales:</p>
           <div className="flex space-x-4">
             {[
-              { icon: FaFacebookF, href: 'https://facebook.com', label: 'Facebook' },
-              { icon: FaEnvelope, href: 'mailto:instalaciones@rexantec.com.ar', label: 'Email' },
-              { icon: FaInstagram, href: 'https://instagram.com', label: 'Instagram' },
+              { icon: FaFacebookF, href: 'https://m.facebook.com/100083022592038/', label: 'Facebook' },
+              { icon: FaEnvelope, href: 'mailto:rexantecservicios@gmail.com.ar', label: 'Email' },
+              { icon: FaInstagram, href: 'https://www.instagram.com/rexantec_servicios?igsh=bDF1ZHA3dGo4cGY0', label: 'Instagram' },
               { icon: FaTiktok, href: 'https://tiktok.com', label: 'TikTok' },
-              { icon: FaYoutube, href: 'https://youtube.com', label: 'Youtube' },
+              { icon: FaYoutube, href: 'https://youtube.com/@rexantec-f8x?si=4FjJfx9Di63LNzD1', label: 'Youtube' },
             ].map(({ icon: Icon, href, label }, i) => (
               <Link
                 key={i}
