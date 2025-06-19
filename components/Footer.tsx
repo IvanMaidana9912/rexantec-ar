@@ -28,7 +28,7 @@ export default function Footer() {
               href="mailto:rexantecservicios@gmail.com.ar"
               className="hover:text-red-100 transition"
             >
-              <FaInfo className="mr-2 inline-flex items-center" /> rexantecservicios@gmail.com.ar
+              <FaInfo className="mr-2 inline-flex items-center" />rexantecservicios@gmail.com.ar
             </Link>
           </p>
           <p>
