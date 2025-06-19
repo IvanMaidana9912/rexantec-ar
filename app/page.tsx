@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <Navbar />
       <main className='overflow-x-hidden'>
-        <Hero imgHREF='Group-200.png'/>
+        <Hero imgHREF='https://i.imgur.com/iOcwLpQ.jpeg' />
         <Services />
         <Brands />
         <WhyChooseUs />

@@ -53,7 +53,7 @@ export default function Services() {
               text-center
             `}
           >
-            Proyecto Desmontaje
+            Proyectos Realizados
           </div>
         </div>
 

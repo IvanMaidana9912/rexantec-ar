@@ -14,7 +14,7 @@ export default function Hero({imgHREF}: {imgHREF: string}) {
     >
       {/* Imagen de fondo */}
       <Image
-        src={`/images/${imgHREF}`}
+        src={`${imgHREF}`}
         alt="Climatización MCE Hero"
         fill
         className="object-cover"
