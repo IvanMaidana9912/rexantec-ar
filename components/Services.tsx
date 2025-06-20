@@ -3,19 +3,25 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Services() {
-  const items = [
-    { title: 'Instalación de equipos', description: 'Aires acondicionados centrales y VRV.' },
-    { title: 'Arreglos generales', description: 'Resolvemos cualquier imprevisto técnico.' },
-    { title: 'Mantenimiento', description: 'Servicio de mantenimiento integral.' },
-    { title: 'Abono mensual', description: 'Te ofrecemos un pago mensual para el mantenimiento acorde a tus necesidades.' },
-  ];
+interface ServicesItems {
+  title: string;
+  description: string;
+};
 
+const SERVICES: ServicesItems[] = [
+  { title: 'Instalación de equipos', description: 'Aires acondicionados centrales y VRV.' },
+  { title: 'Arreglos generales', description: 'Resolvemos cualquier imprevisto técnico.' },
+  { title: 'Mantenimiento', description: 'Servicio de mantenimiento integral.' },
+  { title: 'Abono mensual', description: 'Te ofrecemos un pago mensual para el mantenimiento acorde a tus necesidades.' },
+];
+
+
+export default function Services() {
   return (
     <section id="servicios" className="py-24 bg-[#0f446ca1]">
       <div className={`flex flex-col md:flex-row gap-12 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0 mx-auto`}>
         <div
-          data-aos="fade-right" 
+          data-aos="fade-right"
           data-aos-offset="200"
           className={`relative flex-shrink-0 w-full sm:w-[380px] h-64 sm:h-[598px] overflow-hidden mx-auto rounded-2xl flex justify-center`}>
           <Link href="/proyectos" className="w-[380px] h-[555px] absolute rounded-xl">
@@ -41,17 +47,18 @@ export default function Services() {
             Nuestros Servicios
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-8 h-full items-start max-w-auto lg:max-w-full xl:max-w-9/12">
-            {items.map((item, i) => (
-              <div key={item.title} data-aos="fade-up" data-aos-delay={`${200 + i * 100}`}>
-                <div className="w-12 sm:w-16 h-1 bg-[#E22128] mb-2" />
-                <h3 className="text-lg sm:text-xl font-semibold text-black mb-1">
-                  {item.title}
-                </h3>
-                <p className="text-sm sm:text-base text-white">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+            {
+              SERVICES.map((item, i) => (
+                <div key={item.title} data-aos="fade-up" data-aos-delay={`${200 + i * 100}`}>
+                  <div className="w-12 sm:w-16 h-1 bg-[#E22128] mb-2" />
+                  <h3 className="text-lg sm:text-xl font-semibold text-black mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-white">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
           </div>
         </div>
       </div>

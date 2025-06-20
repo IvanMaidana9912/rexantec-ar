@@ -3,7 +3,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const logos = [
+interface Logos {
+  name: string;
+  href: string;
+};
+
+const LOGOS: Logos[] = [
   { name: 'bgh',       href: 'https://www.bgh.com.ar/climatizacion/aires-acondicionados-split' },
   { name: 'blue-star', href: 'https://www.bluestarcooking.com/' },
   { name: 'carrier',   href: 'https://www.carrier.com/residential/en/us/products/air-conditioners/' },
@@ -25,7 +30,7 @@ export default function Brands() {
         <div
           className="flex items-center space-x-6 sm:space-x-8 md:space-x-12 w-max"
           style={{ animation: 'scroll 20s linear infinite' }}>
-          {[...logos, ...logos].map(({ name, href }, idx) => (
+          {[...LOGOS, ...LOGOS].map(({ name, href }, idx) => (
             <div
               key={idx}
               className="flex-shrink-0 relative w-32 sm:w-40 md:w-52 h-16 sm:h-20 md:h-28">

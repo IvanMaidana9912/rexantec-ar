@@ -13,7 +13,10 @@ export default function Home() {
     <>
       <Navbar />
       <main className='overflow-x-hidden'>
-        <Hero imgHREF='https://i.imgur.com/pqcz6yO.jpeg' />
+        <Hero
+          imgHREF='https://i.imgur.com/pqcz6yO.jpeg'
+          title="Momentos Rexantec"
+          description="¡Gracias!" />
         <Gallery images={IMAGE_SRC} />
       </main>
     </>

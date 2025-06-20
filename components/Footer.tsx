@@ -4,6 +4,18 @@ import Link from 'next/link';
 import { FaFacebookF, FaEnvelope, FaInstagram, FaTiktok, FaWhatsapp, FaInfo, FaYoutube } from 'react-icons/fa';
 import { FaLocationPin } from 'react-icons/fa6';
 
+
+interface Social {
+  href: string;
+  text: string;
+};
+
+const SOCIAL_LINK: Social[] = [
+  { href: '#instalaciones', text: 'Instalaciones' },
+  { href: '#mantenimiento', text: 'Mantenimiento' },
+  { href: '#reparaciones', text: 'Reparaciones' },
+];
+
 export default function Footer() {
   return (
     <footer className="relative bg-[#E22128] text-white pt-12">
@@ -39,11 +51,7 @@ export default function Footer() {
         <div className="text-center">
           <h3 className="text-xl font-bold mb-2">Servicios</h3>
           <ul className="space-y-2">
-            {[
-              { href: '#instalaciones', text: 'Instalaciones' },
-              { href: '#mantenimiento', text: 'Mantenimiento' },
-              { href: '#reparaciones', text: 'Reparaciones' },
-            ].map((item) => (
+            {SOCIAL_LINK.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
@@ -83,7 +91,13 @@ export default function Footer() {
       </div>
       <div className="border-t border-[#E22128] opacity-50" />
       <div className="text-center text-sm text-red-200 py-6">
-        © {new Date().getFullYear()} Rexantec. Todos los derechos reservados.
+        © {new Date().getFullYear()} REXANTEC || Todos los derechos reservados.&nbsp;
+        <Link
+          href="https://github.com/Ivan9912"
+          target="_blank"
+          className="text-white font-semibold transition-opacity duration-200 hover:text-[#0f446c]">
+          By Ivan Maidana
+        </Link>
       </div>
     </footer>
   )

@@ -2,14 +2,24 @@
 
 import Image from 'next/image';
 
-export default function Hero({imgHREF}: {imgHREF: string}) {
+interface HeroProps {
+  imgHREF: string;
+  title: string;
+  description: string;
+};
+
+export default function Hero({
+  imgHREF,
+  title,
+  description,
+}: HeroProps) {
   return (
     <section
       id="inicio"
       className="relative overflow-hidden h-[75vh] md:h-screen min-h-[500px] rounded-br-[200px] bg-[#0f446ca1]">
       <Image
-        src={`${imgHREF}`}
-        alt="Climatización MCE Hero"
+        src={imgHREF}
+        alt={title}
         fill
         className="object-cover"
       />
@@ -19,10 +29,10 @@ export default function Hero({imgHREF}: {imgHREF: string}) {
           Profesionales de confianza
         </p>
         <h1 className="text-white font-bold leading-snug max-w-3xl mx-auto md:mx-0 mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-          Servicio técnico especializado en Aire Acondicionado y Calefacción Central.
+          {title}
         </h1>
         <p className="text-white mb-6 max-w-2xl mx-auto md:mx-0 text-sm sm:text-base">
-          Proveemos garantía total de los equipos y servicios prestados, junto al mejor servicio de atención al cliente, poniendo a su disposición toda nuestra experiencia.
+          {description}
         </p>
         <a
           href="https://wa.me/5491158947428?text=Hola%20Rexantec%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto%20sobre%3A%20%0AY%20estas%20son%20las%20fotos7videos%3A"

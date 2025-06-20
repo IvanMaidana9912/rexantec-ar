@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export interface Supporter {
+interface Supporter {
   src: string;
   alt: string;
   href: string;
