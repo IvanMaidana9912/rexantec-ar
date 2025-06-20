@@ -26,14 +26,12 @@ export default function Gallery({ images }: GalleryProps) {
     setSelected(null);
   }, []);
 
-  // Efecto para desactivar/re-activar scroll de la página
   useEffect(() => {
     if (selected !== null) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
     }
-    // Cleanup por si el componente se desmonta con modal abierto
     return () => { document.body.style.overflow = ''; };
   }, [selected]);
 
@@ -45,14 +43,12 @@ export default function Gallery({ images }: GalleryProps) {
 
   return (
     <>
-      {/* Galería */}
       <section className="container mx-auto my-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 min-h-screen">
         {images.map((img, i) => (
           <div
             key={i}
             className="cursor-pointer overflow-hidden lg:rounded-2xl shadow-lg"
-            onClick={() => openModal(i)}
-          >
+            onClick={() => openModal(i)}>
             <Image
               src={img.SrcI}
               alt={img.AltI}
@@ -63,34 +59,21 @@ export default function Gallery({ images }: GalleryProps) {
           </div>
         ))}
       </section>
-
-      {/* Modal */}
       {selected !== null && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
-          onClick={closeModal}
-        >
+          onClick={closeModal}>
           <div
             className="relative max-w-[90vw] max-h-[90vh] overflow-hidden"
-            onClick={e => e.stopPropagation()}
-          >
-            {/* Botón de cerrar */}
+            onClick={e => e.stopPropagation()}>
             <button
               onClick={closeModal}
-              className="
-                absolute top-2 right-2 z-[51] text-white
-                bg-black bg-opacity-50 p-2 rounded-full
-                hover:bg-opacity-75 transition
-              "
-            >
+              className="absolute top-2 right-2 z-[51] text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition">
               <FaTimes size={20} />
             </button>
-
-            {/* Imagen con zoom por scroll */}
             <div
               className="w-full h-full flex items-center justify-center"
-              onWheel={onWheel}
-            >
+              onWheel={onWheel}>
               <Image
                 src={images[selected].SrcI}
                 alt={images[selected].AltI}
@@ -107,5 +90,5 @@ export default function Gallery({ images }: GalleryProps) {
         </div>
       )}
     </>
-  );
-}
+  )
+};

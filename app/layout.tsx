@@ -7,8 +7,7 @@ export const metadata: Metadata = {
   description:
     'Rexantec ofrece instalaciones y soluciones integrales de climatización y termomecánica...',
   keywords: [
-    'Rexantec','climatización','termomecánica','aire acondicionado',
-    'chiller','mini split','VRV','VRF','instalaciones','CABA','Argentina'
+    'Rexantec','climatización','termomecánica','aire acondicionado','chiller','mini split','VRV','VRF','instalaciones','CABA','Argentina'
   ],
   robots: {
     index: true,
@@ -36,7 +35,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  // como no lo usas, lo dejamos null para que Next.js lo omita
   twitter: null,
   icons: {
     icon: '/favicon.ico',
@@ -47,22 +45,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es-419">
       <head>
-        {/* Favicon / apple-touch-icon */}
         <link rel="apple-touch-icon" href="https://i.imgur.com/oRe3rLg.png" />
         <link rel="icon" href="https://i.imgur.com/oRe3rLg.png" type="image/x-png" />
-
-        {/* Facebook Publisher (meta manual) */}
         <meta
           property="article:publisher"
           content="https://m.facebook.com/100083022592038/"
         />
-
-        {/* Rel=me para perfiles */}
         <link rel="me" href="https://www.instagram.com/rexantec_servicios" />
         <link rel="me" href="https://m.facebook.com/100083022592038/" />
         <link rel="me" href="https://youtube.com/@rexantec-f8x" />
-
-        {/* JSON-LD para Organization (opcional) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

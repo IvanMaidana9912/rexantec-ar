@@ -24,14 +24,11 @@ export default function Brands() {
       <div className="mx-auto px-4 sm:px-8 lg:px-0 overflow-hidden">
         <div
           className="flex items-center space-x-6 sm:space-x-8 md:space-x-12 w-max"
-          style={{ animation: 'scroll 20s linear infinite' }}
-        >
-          {/** Duplicamos el array para que el scroll sea continuo */}
+          style={{ animation: 'scroll 20s linear infinite' }}>
           {[...logos, ...logos].map(({ name, href }, idx) => (
             <div
               key={idx}
-              className="flex-shrink-0 relative w-32 sm:w-40 md:w-52 h-16 sm:h-20 md:h-28"
-            >
+              className="flex-shrink-0 relative w-32 sm:w-40 md:w-52 h-16 sm:h-20 md:h-28">
               <Link href={href} target='_blank'> 
                 <Image
                   src={`/images/brands/${name}.png`}
@@ -44,8 +41,6 @@ export default function Brands() {
           ))}
         </div>
       </div>
-
-      {/* Keyframes para la animación */}
       <style jsx global>{`
         @keyframes scroll {
           0% {
@@ -57,5 +52,5 @@ export default function Brands() {
         }
       `}</style>
     </section>
-  );
-}
+  )
+};

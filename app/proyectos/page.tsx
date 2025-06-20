@@ -73,7 +73,6 @@ const IMAGE_SRC: ImagesArray[] = [
   { SrcI: 'https://i.imgur.com/ngM1mGo.jpeg', AltI: 'P61' },
 ];
 
-
 export default function Home() {
   return (
     <>
@@ -84,5 +83,5 @@ export default function Home() {
         <Footer />
       </main>
     </>
-  );
-}
+  )
+};

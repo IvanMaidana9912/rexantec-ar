@@ -1,4 +1,5 @@
 'use client';
+
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 import AOS from 'aos';
@@ -9,7 +10,7 @@ export default function ClientAOS() {
   useEffect(() => {
     AOS.init({ duration: 800, once: true, disable: () => window.innerWidth < 640 });
     AOS.refresh();
-  }, [path]); // se volverá a inicializar en cada cambio de ruta o hash
+  }, [path]);
 
   return null;
-}
+};
