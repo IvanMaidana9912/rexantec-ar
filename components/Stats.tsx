@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
@@ -6,9 +6,9 @@ import { useInView } from 'react-intersection-observer';
 export default function Stats() {
   const items = [
     { end: 250, suffix: '+', label: 'Instalaciones' },
-    { end: 160,  suffix: '+', label: 'Clientes satisfechos' },
+    { end: 160, suffix: '+', label: 'Clientes satisfechos' },
     { end: 15,  suffix: '',  label: 'Reseñas en Google' },
-    { end: 7,  suffix: '+', label: 'Empresas corporativas' },
+    { end: 7,   suffix: '+', label: 'Empresas corporativas' },
   ];
 
   // Cuando el 30% de la sección sea visible, dispara solo una vez
@@ -18,27 +18,47 @@ export default function Stats() {
   });
 
   return (
-    <section id="stats" ref={ref} className="py-16 bg-[#0f446ca1]">
-      <div className="container mx-auto px-28 sm:px-20 lg:px-0">
+    <section
+      id="stats"
+      ref={ref}
+      className="py-16 bg-[#0f446ca1] flex justify-center"
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-0">
         <div
-          className="bg-[#E22128] rounded-2xl p-6 sm:p-8 md:p-12 mx-auto max-w-5xl shadow-lg"
+          className="
+            bg-[#E22128]
+            rounded-2xl
+            p-4 sm:p-6 md:p-16
+            shadow-lg
+            mx-auto
+            w-full max-w-5xl
+            flex justify-center
+          "
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+          <div
+            className="
+              grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4
+              gap-8
+              text-center text-white
+              w-full
+            "
+          >
             {items.map(({ end, suffix, label }, i) => (
               <div key={i}>
-                  <div
-                    className="
-                      text-4xl md:text-5xl font-extrabold leading-none
-                      font-mono min-w-[4ch]
-                    "
-                  >
+                <div
+                  className="
+                    text-3xl sm:text-4xl md:text-5xl
+                    font-extrabold leading-none
+                    font-mono
+                  "
+                >
                   {inView ? (
                     <CountUp end={end} duration={2} suffix={suffix} />
                   ) : (
                     `0${suffix}`
                   )}
                 </div>
-                <div className="mt-2 text-sm sm:text-base font-medium">
+                <div className="mt-2 text-base sm:text-lg font-medium">
                   {label}
                 </div>
               </div>

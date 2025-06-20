@@ -44,7 +44,7 @@ export default function Services() {
             data-aos="fade-up"
             data-aos-delay="200"
             className={`
-              absolute bottom-6 sm:bottom-10 left-1/2
+              absolute bottom-6 sm:bottom-10 left-10/12 sm:left-1/2
               transform sm:-translate-x-1/2 -translate-x-48 translate-y-1/2
               bg-[#E22128] text-white uppercase text-sm font-bold tracking-wider
               px-6 sm:px-12 py-4 sm:py-8
