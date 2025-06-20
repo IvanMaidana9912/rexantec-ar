@@ -1,35 +1,45 @@
-'use client'
+'use client';
+
 import Image from 'next/image';
+import Link from 'next/link';
 
 const logos = [
-  'blue-star',
-  'westric',
-  'hisense',
-  'toshiba',
-  'carrier',
-  'hitachi',
-  'daikin',
-  'tadiran',
-  'lg',
+  { name: 'bgh',       href: 'https://www.bgh.com.ar/climatizacion/aires-acondicionados-split' },
+  { name: 'blue-star', href: 'https://www.bluestarcooking.com/' },
+  { name: 'carrier',   href: 'https://www.carrier.com/residential/en/us/products/air-conditioners/' },
+  { name: 'daikin',    href: 'https://daikin-argentina.com/' },
+  { name: 'hisense',   href: 'https://global.hisense.com/air-conditioner' },
+  { name: 'hitachi',   href: 'https://www.hitachiaircon.com/' },
+  { name: 'lg',        href: 'https://www.lg.com/ar/aire-acondicionado' },
+  { name: 'midea',     href: 'https://www.midea.com/cl/aireacondicionado' },
+  { name: 'samsung',   href: 'https://www.samsung.com/ar/air-conditioners/all-air-conditioners/' },
+  { name: 'tadiran',   href: 'https://www.tadiran-argentina.com/' },
+  { name: 'toshiba',   href: 'https://www.toshiba-aircon.com.ar/' },
+  { name: 'westric',   href: 'https://westric.com/' },
 ];
 
 export default function Brands() {
   return (
-    <section id="marcas" className="py-16 bg-gray-100">
+    <section id="marcas" className="py-2 bg-gray-100">
       <div className="mx-auto px-4 sm:px-8 lg:px-0 overflow-hidden">
         <div
           className="flex items-center space-x-6 sm:space-x-8 md:space-x-12 w-max"
           style={{ animation: 'scroll 20s linear infinite' }}
         >
-          {/* Duplicamos el array para loop continuo */}
-          {[...logos, ...logos].map((name, idx) => (
-            <div key={idx} className="flex-shrink-0 relative w-32 sm:w-40 md:w-52 h-16 sm:h-20 md:h-28 ">
-              <Image
-                src={`/images/brands/${name}.png`}
-                alt={name}
-                fill
-                className="object-contain"
-              />
+          {/** Duplicamos el array para que el scroll sea continuo */}
+          {[...logos, ...logos].map(({ name, href }, idx) => (
+            <div
+              key={idx}
+              className="flex-shrink-0 relative w-32 sm:w-40 md:w-52 h-16 sm:h-20 md:h-28"
+            >
+              <Link href={href} target='__blank'> 
+                <Image
+                  src={`/images/brands/${name}.png`}
+                  alt={name}
+                  fill
+                  className="object-contain"
+                />
+              </Link>
             </div>
           ))}
         </div>

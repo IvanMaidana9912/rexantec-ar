@@ -1,10 +1,12 @@
 'use client'
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export interface Supporter {
   src: string;
   alt: string;
+  href: string;
 }
 
 interface SupportersProps {
@@ -27,21 +29,27 @@ export default function Supporters({ items }: SupportersProps) {
         <div
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center"
         >
-          {items.map(({ src, alt }, i) => (
-            <div
-              key={i}
-              className="p-4 bg-white rounded-full shadow-sm transition-transform hover:scale-105 flex items-center justify-center"
-              data-aos="zoom-in"
-              data-aos-delay={i * 100}
-            >
-              <Image
-                src={src}
-                alt={alt}
-                width={120}
-                height={80}
-                className="object-contain rounded-full w-auto h-auto"
-              />
-            </div>
+          {items.map(({ src, alt ,href}, i) => (
+            <Link
+            target='__blank'
+            href={href}
+             key={i}
+             className="
+               w-32 h-32 
+               bg-white rounded-full overflow-hidden 
+               shadow-sm transition-transform hover:scale-105 
+               flex items-center justify-center
+             "
+             data-aos="zoom-in"
+             data-aos-delay={i * 250}
+           >
+             <Image
+               src={src}
+               alt={alt}
+               fill
+               className="object-contain"
+             />
+           </Link>
           ))}
         </div>
       </div>
