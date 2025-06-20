@@ -68,7 +68,7 @@ export default function Gallery({ images }: GalleryProps) {
             onClick={e => e.stopPropagation()}>
             <button
               onClick={closeModal}
-              className="absolute top-2 right-2 z-[51] text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition">
+              className="absolute top-2 right-2 z-[51] text-white bg-black hover:text-black hover:bg-transparent bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition cursor-pointer">
               <FaTimes size={20} />
             </button>
             <div
