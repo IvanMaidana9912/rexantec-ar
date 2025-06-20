@@ -33,7 +33,7 @@ export default function Footer() {
           </p>
           <p>
             <Link
-              href="https://wa.me/5491158947428?text=%C2%A1Hola!%20Te%20saluda%20Rexantec%20%C2%BFC%C3%B3mo%20te%20puedo%20ayudar%3F"
+              href="https://wa.me/5491158947428?text=Hola%20Rexantec%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto%20sobre%3A%20%0AY%20estas%20son%20las%20fotos7videos%3A"
               className="inline-flex items-center hover:text-red-100 transition"
             >
               <FaWhatsapp className="mr-2 " /> +54 9 11 5894 7428

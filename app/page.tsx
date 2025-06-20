@@ -7,15 +7,10 @@ import {
   Stats,
   Testimonials,
   FAQ,
+  Supporters,
   QuoteCTA,
   Footer,
 } from '../components';
-
-import Supporters, { Supporter } from '@/components/Supporters';
-
-
-
-
 
 export default function Home() {
   return (

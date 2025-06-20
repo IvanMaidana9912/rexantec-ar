@@ -83,7 +83,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="https://wa.me/5491158947428"
+              href="https://wa.me/5491158947428?text=Hola%20Rexantec%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto%20sobre%3A%20%0AY%20estas%20son%20las%20fotos7videos%3A"
               target="_blank"
               className="inline-flex items-center px-4 py-2 bg-green-500 hover:bg-green-600 transition text-white font-semibold rounded-lg"
             >
