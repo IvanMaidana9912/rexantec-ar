@@ -1,4 +1,3 @@
-// app/layout.tsx
 import { Metadata } from 'next';
 import { ClientAOS } from "@/components";
 import "./globals.css";
