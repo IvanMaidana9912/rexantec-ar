@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     locale: 'es_AR',
     images: [
       {
-        url: 'https://wwwrexantec.com.ar/images/og-image.png',
+        url: 'https://www.rexantec.com.ar/images/og-image.png',
         alt: 'Rexantec – Climatización y termomecánica',
       },
     ],
