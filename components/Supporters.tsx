@@ -9,11 +9,17 @@ export interface Supporter {
   href: string;
 }
 
-interface SupportersProps {
-  items: Supporter[];
-}
+const SUPPORTERS: Supporter[] = [
+  { src: '/images/supporters/alto-palermo.jpeg', alt: 'Alto Palermo', href: 'https://www.altopalermo.com.ar/'},
+  { src: '/images/supporters/gentec.jpeg', alt: 'GenTec', href: 'https://www.gentecinstalaciones.com.ar/'},
+  { src: '/images/supporters/cmr.jpeg', alt: 'CMR', href: 'http://countrymirefugio.com/#!/-bienvenido/' },
+  { src: '/images/supporters/airmz.jpeg', alt: 'AirMZ', href: 'https://www.instagram.com/airmzrefrigeracion?igsh=MTdzMjVraGzsMm44aA==' },
+  { src: '/images/supporters/edelap.jpg', alt: 'Edelap', href: 'https://www.edelap.com.ar/' },
+  { src: '/images/supporters/ingem.jpg', alt: 'Logo XYZ', href: 'https://www.instagram.com/ingemaireacondicionado?igsh=Y3EzeWlwY3J2bGxu' },
+  { src: '/images/supporters/bsvrv.png', alt: 'BSVRV', href: 'https://www.instagram.com/buenosairesvrv?igsh=dnJsdHpoYTlyMzl4' },
+];
 
-export default function Supporters({ items }: SupportersProps) {
+export default function Supporters() {
   return (
     <section
       id="supporters"
@@ -29,7 +35,7 @@ export default function Supporters({ items }: SupportersProps) {
         <div
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center"
         >
-          {items.map(({ src, alt ,href}, i) => (
+          {SUPPORTERS.map(({ src, alt ,href}, i) => (
             <Link
             target='_blank'
             href={href}

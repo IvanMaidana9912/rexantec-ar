@@ -52,6 +52,7 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 h-16 flex items-center justify-between">
           {/* Logo */}
+          <div className={`${!menuOpen ? 'hidden' : 'block'}`}/>
           <Link
             href="/#"
             className="
