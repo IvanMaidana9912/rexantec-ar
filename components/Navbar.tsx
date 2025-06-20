@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -23,6 +23,7 @@ export default function Navbar() {
   const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Controla el scroll y el estado 'scrolled'
   useEffect(() => {
     requestAnimationFrame(() => {
       setMounted(true);
@@ -32,6 +33,14 @@ export default function Navbar() {
       return () => window.removeEventListener('scroll', onScroll);
     });
   }, []);
+
+  // Desactiva/activa el scrollbar de la página al abrir/cerrar el menú
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
 
   return (
     <>
@@ -43,7 +52,6 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-12 h-16 flex items-center justify-between">
           {/* Logo */}
-          <div className={`${!menuOpen ? 'hidden' : 'block'}`}/>
           <Link
             href="/#"
             className="
@@ -100,11 +108,17 @@ export default function Navbar() {
       <div
         className={`
           fixed inset-0 z-40 transition-transform duration-300
-          md:hidden bg-black/30 bg-opacity-70 backdrop-blur-sm select-none
+          md:hidden bg-black/30 backdrop-blur-sm select-none
           ${menuOpen ? 'translate-x-0' : 'translate-x-full'}
         `}
       >
-        <Link href={'/#inicio'} className='absolute top-0 bottom-0 left-0 right-0 bg-transparent h-screen w-screen' onClick={() => setMenuOpen(false)}/>
+        {/* Overlay clicable para cerrar */}
+        <Link
+          href="/#inicio"
+          className="absolute inset-0 bg-transparent"
+          onClick={() => setMenuOpen(false)}
+        />
+
         <div className="absolute top-0 right-0 w-3/4 max-w-xs h-full bg-white shadow-lg p-6 flex flex-col">
           {/* Close */}
           <button
@@ -134,7 +148,7 @@ export default function Navbar() {
 
           {/* Button */}
           <Link
-            href="https://wa.me/5491158947428"
+            href="https://wa.me/5491158947428?text=%C2%A1Hola!%20Te%20saluda%20Rexantec%20%C2%BFC%C3%B3mo%20te%20puedo%20ayudar%3F"
             target="_blank"
             onClick={() => setMenuOpen(false)}
             className="mt-4 inline-flex items-center justify-center px-4 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition"

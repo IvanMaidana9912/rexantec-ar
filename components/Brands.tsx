@@ -32,7 +32,7 @@ export default function Brands() {
               key={idx}
               className="flex-shrink-0 relative w-32 sm:w-40 md:w-52 h-16 sm:h-20 md:h-28"
             >
-              <Link href={href} target='__blank'> 
+              <Link href={href} target='_blank'> 
                 <Image
                   src={`/images/brands/${name}.png`}
                   alt={name}

@@ -1,99 +1,111 @@
-'use client'
+'use client';
 
-import { useState } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import Image from 'next/image';
-import { FaSearchPlus, FaSearchMinus, FaTimes } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 
 export interface ImagesArray {
   SrcI: string;
   AltI: string;
 }
 
-interface PaginatedGalleryProps {
+interface GalleryProps {
   images: ImagesArray[];
 }
 
-export default function Gallery({ images }: PaginatedGalleryProps) {
-  const [modalSrc, setModalSrc] = useState<string | null>(null);
-  const [zoom, setZoom] = useState(1);
+export default function Gallery({ images }: GalleryProps) {
+  const [selected, setSelected] = useState<number | null>(null);
+  const [scale, setScale] = useState(1);
 
-  const open = (src: string) => {
-    setModalSrc(src);
-    setZoom(1);
-  };
-  const close = () => setModalSrc(null);
+  const openModal = useCallback((idx: number) => {
+    setSelected(idx);
+    setScale(1);
+  }, []);
+
+  const closeModal = useCallback(() => {
+    setSelected(null);
+  }, []);
+
+  // Efecto para desactivar/re-activar scroll de la página
+  useEffect(() => {
+    if (selected !== null) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    // Cleanup por si el componente se desmonta con modal abierto
+    return () => { document.body.style.overflow = ''; };
+  }, [selected]);
+
+  const onWheel = useCallback((e: React.WheelEvent) => {
+    e.preventDefault();
+    const delta = -e.deltaY * 0.001;
+    setScale(prev => Math.min(3, Math.max(1, prev + delta)));
+  }, []);
 
   return (
-    <div className='min-h-screen'>
-      <section className="container mx-auto my-16 lg:my-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-6">
+    <>
+      {/* Galería */}
+      <section className="container mx-auto my-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 min-h-screen">
         {images.map((img, i) => (
           <div
             key={i}
-            className="cursor-pointer overflow-hidden rounded-lg border-2 border-red-800"
-            onClick={() => open(img.SrcI)}
+            className="cursor-pointer overflow-hidden lg:rounded-2xl shadow-lg"
+            onClick={() => openModal(i)}
           >
             <Image
               src={img.SrcI}
               alt={img.AltI}
               width={400}
               height={300}
-              className="object-cover w-full h-48 sm:h-56 md:h-64"
+              className="w-full h-60 object-cover"
             />
           </div>
         ))}
       </section>
 
       {/* Modal */}
-      {modalSrc && (
+      {selected !== null && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black p-4"
-          onClick={close}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
+          onClick={closeModal}
         >
           <div
-            className="relative max-w-auto max-h-auto"
-            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-[90vw] max-h-[90vh] overflow-hidden"
+            onClick={e => e.stopPropagation()}
           >
-            {/* Cerrar */}
+            {/* Botón de cerrar */}
             <button
-              onClick={close}
-              className="absolute top-2 right-2 text-black text-2xl p-1 z-[51] bg-gray-200/70 rounded-full cursor-pointer"
-              aria-label="Cerrar"
+              onClick={closeModal}
+              className="
+                absolute top-2 right-2 z-[51] text-white
+                bg-black bg-opacity-50 p-2 rounded-full
+                hover:bg-opacity-75 transition
+              "
             >
-              <FaTimes />
+              <FaTimes size={20} />
             </button>
 
-            {/* Imagen con zoom */}
-            <div className="overflow-hidden">
+            {/* Imagen con zoom por scroll */}
+            <div
+              className="w-full h-full flex items-center justify-center"
+              onWheel={onWheel}
+            >
               <Image
-                src={modalSrc}
-                alt="Ampliada"
-                width={400}
-                height={400}
-                className="transition-transform"
-                style={{ transform: `scale(${zoom})` }}
+                src={images[selected].SrcI}
+                alt={images[selected].AltI}
+                width={800}
+                height={600}
+                className="object-contain rounded-2xl"
+                style={{
+                  transform: `scale(${scale})`,
+                  transition: 'transform 0.1s ease-out'
+                }}
               />
-            </div>
-
-            {/* Controles de zoom */}
-            <div className="flex justify-center space-x-4 mt-4">
-              <button
-                onClick={() => setZoom((z) => Math.min(z + 0.25, 3))}
-                className="flex items-center justify-center w-10 h-10 bg-white rounded-full text-gray-800 hover:bg-gray-200 transition"
-                aria-label="Zoom in"
-              >
-                <FaSearchPlus />
-              </button>
-              <button
-                onClick={() => setZoom((z) => Math.max(z - 0.25, 1))}
-                className="flex items-center justify-center w-10 h-10 bg-white rounded-full text-gray-800 hover:bg-gray-200 transition"
-                aria-label="Zoom out"
-              >
-                <FaSearchMinus />
-              </button>
             </div>
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }

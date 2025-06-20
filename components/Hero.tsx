@@ -63,7 +63,7 @@ export default function Hero({imgHREF}: {imgHREF: string}) {
         </p>
 
         <a
-          href="https://wa.me/+5491158947428"
+          href="https://wa.me/5491158947428?text=%C2%A1Hola!%20Te%20saluda%20Rexantec%20%C2%BFC%C3%B3mo%20te%20puedo%20ayudar%3F"
           className="
             inline-block bg-green-600 hover:bg-green-700 
             text-white font-medium rounded

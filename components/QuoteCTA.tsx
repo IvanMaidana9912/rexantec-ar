@@ -48,7 +48,7 @@ export default function QuoteCTA() {
           </p>
           <div className="flex justify-center md:justify-start">
             <Link
-              href="https://wa.me/5491158947428"
+              href="https://wa.me/5491158947428?text=%C2%A1Hola!%20Te%20saluda%20Rexantec%20%C2%BFC%C3%B3mo%20te%20puedo%20ayudar%3F"
               target="_blank"
               className="inline-flex items-center bg-green-500 hover:bg-green-600 transition px-5 py-3 rounded-lg text-white"
               data-aos="fade-right"

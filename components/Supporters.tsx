@@ -31,7 +31,7 @@ export default function Supporters({ items }: SupportersProps) {
         >
           {items.map(({ src, alt ,href}, i) => (
             <Link
-            target='__blank'
+            target='_blank'
             href={href}
              key={i}
              className="

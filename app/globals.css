@@ -2,3 +2,57 @@
 @tailwind utilities;
 @import 'aos/dist/aos.css';
 
+:root {
+  /* Define aquí tus colores en variables para reutilizar */
+  --sb-color-1: #0F446C;
+  --sb-color-2: #E22128;
+}
+
+/* Firefox */
+html, body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sb-color-2) transparent;
+}
+
+/* WebKit (Chrome, Edge, Safari, Brave…) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  /* Degradado vertical: transparente → azul → rojo → azul → transparente */
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--sb-color-1) 25%,
+    var(--sb-color-2) 50%,
+    var(--sb-color-1) 75%,
+    transparent 100%
+  );
+  /* recorta un poco el thumb para que se vea el track transparente en los bordes */
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background 0.3s;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  /* Intensifica el degradado al pasar el ratón */
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--sb-color-1) 40%,
+    var(--sb-color-2) 60%,
+    var(--sb-color-1) 80%,
+    transparent 100%
+  );
+}
