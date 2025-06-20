@@ -10,7 +10,7 @@ export default function WhyChooseUs() {
         data-aos="fade-left"
       >
         <h2
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-4"
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-8 lg:mb-20 sm:mb-8 md:mb-12 pb-6 sm:pb-8 md:pb-20"
           data-aos="fade-left"
           data-aos-delay="100"
         >

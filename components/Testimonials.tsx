@@ -10,14 +10,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-items-center">
           
           {/* Tarjeta de imagen */}
-          <div className="
-              w-full
-              max-w-[20rem]    /* móvil */
-              sm:max-w-[25rem] /* ≥640px */
-              md:max-w-[30rem] /* ≥768px */
-              lg:max-w-[35rem] /* ≥1024px */
-              relative aspect-[560/315]
-            "
+          <div className="w-full max-w-[20rem] sm:max-w-[25rem] md:max-w-[30rem] lg:max-w-[35rem] relative aspect-[560/315]"
             data-aos="fade-right"
             data-aos-delay="100"
           >
