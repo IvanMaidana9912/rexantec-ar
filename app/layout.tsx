@@ -1,13 +1,15 @@
+// app/layout.tsx
 import { Metadata } from 'next';
-import { ClientAOS } from "@/components";
-import "./globals.css";
+import { ClientAOS } from '@/components';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Rexantec – Soluciones integrales de climatización y termomecánica',
   description:
-    'Rexantec ofrece instalaciones y soluciones integrales de climatización y termomecánica...',
+    'Rexantec ofrece instalaciones y soluciones integrales de climatización y termomecánica para el sector de la construcción.',
   keywords: [
-    'Rexantec','climatización','termomecánica','aire acondicionado','chiller','mini split','VRV','VRF','instalaciones','CABA','Argentina'
+    'Rexantec', 'climatización', 'termomecánica', 'aire acondicionado',
+    'chiller', 'mini split', 'VRV', 'VRF', 'instalaciones', 'CABA', 'Argentina', 'Buenos', 'Aires', 'Buenos Aires', 'Capital', 'Federal'
   ],
   robots: {
     index: true,
@@ -21,23 +23,32 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Rexantec – Soluciones integrales de climatización y termomecánica',
-    description:
-      'Rexantec ofrece instalaciones y soluciones integrales de climatización y termomecánica...',
     type: 'website',
     url: 'https://www.rexantec.com.ar/',
+    title: 'Rexantec – Soluciones integrales de climatización y termomecánica',
+    description:
+      'Rexantec ofrece instalaciones y soluciones integrales de climatización y termomecánica para el sector de la construcción.',
     siteName: 'Rexantec',
     locale: 'es_AR',
     images: [
       {
         url: 'https://www.rexantec.com.ar/images/og-image.png',
-        alt: 'Rexantec – Climatización y termomecánica',
+        alt: 'Climatización y termomecánica',
+        width: 1200,
+        height: 630,
       },
     ],
   },
-  twitter: null,
+  twitter: {
+    card: 'summary_large_image',
+    site: '',            // puedes dejar vacío o tu handle
+    title: '',           // opcional si quieres override
+    description: '',     // opcional
+    images: [],          // opcional
+  },
   icons: {
     icon: '/favicon.ico',
+    apple: '/images/og-image.png',
   },
 };
 
@@ -45,12 +56,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es-419">
       <head>
+        <link rel="icon" href="https://i.imgur.com/oRe3rLg.png" type="image/png" />
         <link rel="apple-touch-icon" href="https://i.imgur.com/oRe3rLg.png" />
-        <link rel="icon" href="https://i.imgur.com/oRe3rLg.png" type="image/x-png" />
-        <meta
-          property="article:publisher"
-          content="https://m.facebook.com/100083022592038/"
-        />
+        <meta property="article:publisher" content="https://m.facebook.com/100083022592038/" />
         <link rel="me" href="https://www.instagram.com/rexantec_servicios" />
         <link rel="me" href="https://m.facebook.com/100083022592038/" />
         <link rel="me" href="https://youtube.com/@rexantec-f8x" />
@@ -66,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               sameAs: [
                 'https://m.facebook.com/100083022592038/',
                 'https://www.instagram.com/rexantec_servicios',
-                'https://youtube.com/@rexantec-f8x'
+                'https://youtube.com/@rexantec-f8x',
               ],
             }),
           }}
