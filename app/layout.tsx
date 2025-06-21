@@ -49,6 +49,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
     apple: '/images/og-image.png',
+    shortcut: '/images/og-image.png'
   },
 };
 
@@ -56,8 +57,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es-419">
       <head>
-        <link rel="icon" href="https://i.imgur.com/oRe3rLg.png" type="image/png" />
-        <link rel="apple-touch-icon" href="https://i.imgur.com/oRe3rLg.png" />
         <meta property="article:publisher" content="https://m.facebook.com/100083022592038/" />
         <link rel="me" href="https://www.instagram.com/rexantec_servicios" />
         <link rel="me" href="https://m.facebook.com/100083022592038/" />
