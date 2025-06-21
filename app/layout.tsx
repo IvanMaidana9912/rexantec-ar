@@ -1,4 +1,3 @@
-// app/layout.tsx
 import { Metadata } from 'next';
 import { ClientAOS } from '@/components';
 import './globals.css';
@@ -9,8 +8,9 @@ export const metadata: Metadata = {
     'Rexantec ofrece instalaciones y soluciones integrales de climatización y termomecánica para el sector de la construcción.',
   keywords: [
     'Rexantec', 'climatización', 'termomecánica', 'aire acondicionado',
-    'chiller', 'mini split', 'VRV', 'VRF', 'instalaciones', 'CABA', 'Argentina', 'Buenos', 'Aires', 'Buenos Aires', 'Capital', 'Federal'
+    'chiller', 'mini split', 'VRV', 'VRF', 'instalaciones', 'CABA', 'Argentina'
   ],
+  manifest: '/manifest.webmanifest',
   robots: {
     index: true,
     follow: true,
@@ -41,15 +41,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '',            // puedes dejar vacío o tu handle
-    title: '',           // opcional si quieres override
-    description: '',     // opcional
-    images: [],          // opcional
+    site: '@tu_handle',
   },
   icons: {
     icon: '/favicon.ico',
     apple: '/images/og-image.png',
-    shortcut: '/images/og-image.png'
+    shortcut: '/images/og-image.png',
   },
 };
 
