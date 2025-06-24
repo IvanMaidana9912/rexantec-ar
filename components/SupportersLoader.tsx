@@ -6,10 +6,10 @@ import dynamic from 'next/dynamic';
 const Supporters = dynamic(
   () => import('../components/Supporters'),
     { ssr: false ,
-      loading: () => (<div className='overflow-x-hidden h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]
+      loading: () => (<div className='overflow-x-hidden w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]
       '/>)
     }
     );
 
     export default function SupportersLoader() {
-      return ( <div className="overflow-x-hidden"><Supporters /></div>);};
+      return ( <div className="overflow-x-hidden w-full"><Supporters /></div>);};
