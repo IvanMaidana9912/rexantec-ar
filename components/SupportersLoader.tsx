@@ -12,4 +12,4 @@ const Supporters = dynamic(
     );
 
     export default function SupportersLoader() {
-      return ( <div className="overflow-x-hidden"><Supporters /></div>);
+      return ( <div className="overflow-x-hidden"><Supporters /></div>);};
