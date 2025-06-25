@@ -10,5 +10,5 @@ export { default as Footer } from './Footer';
 export { default as QuoteCTA } from './QuoteCTA';
 export { default as ClientAOS } from './ClientAOS';
 export { default as Gallery } from './Gallery';
-export { default as SupportersLoader } from './SupportersLoader';
+export { default as SupportersWrapper } from './SupportersWrapper';
 export { default as CatchAllErrors } from './CatchAllErrors';

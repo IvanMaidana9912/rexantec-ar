@@ -31,22 +31,28 @@ export default function Supporters() {
           data-aos="fade-down">
           Empresas que nos apoyan
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center">
+        <div className=" grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-8 items-center justify-items-center">
           {SUPPORTERS.map(({ src, alt, href }, i) => (
-            <Link
-              target='_blank'
-              href={href}
+            <div 
               key={i}
-              className="w-32 h-32 bg-white rounded-full overflow-hidden shadow-sm transition-transform hover:scale-105 flex items-center justify-center"
+              className="w-32 h-32"
               data-aos="zoom-in"
-              data-aos-delay={i * 250}>
-              <Image
-                src={src}
-                alt={alt}
-                fill
-                className="object-contain"
-              />
-            </Link>
+              data-aos-delay={i * 200}>
+              <Link
+                href={href}
+                target="_blank"
+                className="block w-full h-full">
+                  <div  className="relative w-full h-full bg-white rounded-full overflow-hidden shadow-sm transition-transform hover:scale-105">
+                    <Image
+                      src={src}
+                      alt={alt}
+                      fill
+                      className="object-contain w-full h-full"
+                      sizes="128px"
+                    />
+                  </div>
+              </Link>
+            </div>
           ))}
         </div>
       </div>
