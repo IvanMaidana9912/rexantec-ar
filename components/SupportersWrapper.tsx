@@ -26,7 +26,7 @@ function SupportersWrapper() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    AOS.init({ once: true, duration: 600 });
+    AOS.init({ once: true, duration: 800 });
     // esperamos un ciclo para que AOS se configure
     const t = setTimeout(() => setReady(true), 0);
     return () => clearTimeout(t);

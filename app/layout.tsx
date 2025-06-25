@@ -58,6 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="me" href="https://www.instagram.com/rexantec_servicios" />
         <link rel="me" href="https://m.facebook.com/100083022592038/" />
         <link rel="me" href="https://youtube.com/@rexantec-f8x" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

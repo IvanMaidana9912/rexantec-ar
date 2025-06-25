@@ -90,14 +90,16 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-[#E22128] opacity-50" />
-      <div className="text-center text-sm text-red-200 py-6">
-        © {new Date().getFullYear()} REXANTEC || Todos los derechos reservados.&nbsp;
-        <Link
-          href="https://github.com/Ivan9912"
-          target="_blank"
-          className="text-white font-semibold transition-opacity duration-200 hover:text-[#0f446c]">
-          By Ivan Maidana
-        </Link>
+      <div className="mx-4 text-center text-sm text-red-200 py-6">
+        <div className='flex flex-col'>
+          © {new Date().getFullYear()} REXANTEC || Todos los derechos reservados.&nbsp;
+          <Link
+            href="https://github.com/Ivan9912"
+            target="_blank"
+            className="text-white font-semibold transition-opacity duration-200 hover:text-[#0f446c]">
+            By Ivan Maidana
+          </Link>
+        </div>
       </div>
     </footer>
   )
