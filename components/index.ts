@@ -12,3 +12,4 @@ export { default as ClientAOS } from './ClientAOS';
 export { default as Gallery } from './Gallery';
 export { default as SupportersWrapper } from './SupportersWrapper';
 export { default as CatchAllErrors } from './CatchAllErrors';
+export { default as Supporters } from './Supporters';
