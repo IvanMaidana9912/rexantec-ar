@@ -19,7 +19,7 @@ const SERVICES: ServicesItems[] = [
 export default function Services() {
   return (
     <section id="servicios" className="py-24 bg-[#0f446ca1]">
-      <div className={`flex flex-col md:flex-row gap-12 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0 mx-auto`}>
+      <div className="container mx-auto flex flex-col md:flex-row gap-12 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
         <div
           data-aos="fade-right"
           data-aos-offset="200"

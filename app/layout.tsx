@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { ClientAOS } from '@/components';
+import { CatchAllErrors, ClientAOS } from '@/components';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -77,8 +77,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-[#0f446ca1] overflow-x-hidden">
-        <ClientAOS />
-        {children}
+        <CatchAllErrors>
+          <ClientAOS />
+          {children}
+        </CatchAllErrors>
       </body>
     </html>
   )

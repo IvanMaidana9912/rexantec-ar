@@ -11,3 +11,4 @@ export { default as QuoteCTA } from './QuoteCTA';
 export { default as ClientAOS } from './ClientAOS';
 export { default as Gallery } from './Gallery';
 export { default as SupportersLoader } from './SupportersLoader';
+export { default as CatchAllErrors } from './CatchAllErrors';

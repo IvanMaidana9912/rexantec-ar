@@ -17,7 +17,7 @@ const SUPPORTERS: Supporter[] = [
   { src: '/images/supporters/edelap.jpg', alt: 'Edelap', href: 'https://www.edelap.com.ar/' },
   { src: '/images/supporters/ingem.jpg', alt: 'Logo XYZ', href: 'https://www.instagram.com/ingemaireacondicionado?igsh=Y3EzeWlwY3J2bGxu' },
   { src: '/images/supporters/bsvrv.png', alt: 'BSVRV', href: 'https://www.instagram.com/buenosairesvrv?igsh=dnJsdHpoYTlyMzl4' },
-  { src: '/images/supporters/gs.jpg', alt: 'BSVRV', href: 'https://www.instagram.com/dandygabriel?igsh=eHlvMGp0YXFtNWZ5' }, 
+  { src: '/images/supporters/gs.jpg', alt: 'BSVRV', href: 'https://www.instagram.com/dandygabriel?igsh=eHlvMGp0YXFtNWZ5' },
 ];
 
 export default function Supporters() {
