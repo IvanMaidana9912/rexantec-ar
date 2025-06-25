@@ -8,6 +8,7 @@ import {
   Testimonials,
   FAQ,
   Supporters,
+  AnimateDividerLoader,
   QuoteCTA,
   Footer,
 } from '../components';
@@ -30,6 +31,7 @@ export default function Home() {
         <FAQ />
         <Supporters />
         <QuoteCTA />
+        <AnimateDividerLoader />
         <Footer />
       </main>
     </>
