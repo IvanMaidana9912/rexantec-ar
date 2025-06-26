@@ -74,7 +74,7 @@ export default function Footer() {
               { icon: FaFacebookF, href: 'https://m.facebook.com/100083022592038/', label: 'Facebook' },
               { icon: FaEnvelope, href: 'mailto:rexantecservicios@gmail.com.ar', label: 'Email' },
               { icon: FaInstagram, href: 'https://www.instagram.com/rexantec_servicios?igsh=bDF1ZHA3dGo4cGY0', label: 'Instagram' },
-              { icon: FaTiktok, href: 'https://tiktok.com', label: 'TikTok' },
+              { icon: FaTiktok, href: 'https://www.tiktok.com/@rexantec1?lang=en', label: 'TikTok' },
               { icon: FaYoutube, href: 'https://youtube.com/@rexantec-f8x?si=4FjJfx9Di63LNzD1', label: 'Youtube' },
             ].map(({ icon: Icon, href, label }, i) => (
               <Link

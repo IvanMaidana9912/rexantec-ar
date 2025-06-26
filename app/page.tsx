@@ -25,10 +25,10 @@ export default function Home() {
         <Services />
         <Brands />
         <WhyChooseUs />
+        <Supporters />
         <Testimonials />
         <Stats />
         <FAQ />
-        <Supporters />
         <QuoteCTA />
         <Footer />
       </main>
