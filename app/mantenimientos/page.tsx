@@ -1,28 +1,16 @@
- //Acá...
 import {
   Navbar,
   Hero,
   Footer,
 } from '../../components';
 import Gallery, { ImagesArray } from '@/components/Gallery';
+import images from '@/bbdd/IMAGE_SRC_M.json'; 
 
-const IMAGE_SRC: ImagesArray[] = [
-  { SrcI: 'https://i.imgur.com/ikAu5lQ.jpeg', AltI: 'M01' },
-  { SrcI: 'https://i.imgur.com/8I78qlw.jpeg', AltI: 'M02' },
-  { SrcI: 'https://i.imgur.com/ZdASOKM.jpeg', AltI: 'M03' },
-  { SrcI: 'https://i.imgur.com/waXFiLj.jpeg', AltI: 'M04' },
-  { SrcI: 'https://i.imgur.com/i4MWNXq.jpeg', AltI: 'M05' },
-  { SrcI: 'https://i.imgur.com/GyFuxea.jpeg', AltI: 'M06' },
-  { SrcI: 'https://i.imgur.com/Li1eLdu.jpeg', AltI: 'M07' },
-  { SrcI: 'https://i.imgur.com/NfjMnzC.jpeg', AltI: 'M08' },
-  { SrcI: 'https://i.imgur.com/A0A70d7.jpeg', AltI: 'M09' },
-  { SrcI: 'https://i.imgur.com/GBjHMrr.jpeg', AltI: 'M10' },
-  { SrcI: 'https://i.imgur.com/uu8TlST.jpeg', AltI: 'M11' },
-  { SrcI: 'https://i.imgur.com/aOjW6VJ.jpeg', AltI: 'M12' },
-  { SrcI: 'https://i.imgur.com/17gO34j.jpeg', AltI: 'M13' },
-  { SrcI: 'https://i.imgur.com/S46PBZ1.jpeg', AltI: 'M14' },
-  { SrcI: 'https://i.imgur.com/xL9UbzM.jpeg', AltI: 'M15' },
-];
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Mantenimientos | Rexantec',
+};
 
 export default function Home() {
   return (
@@ -33,7 +21,7 @@ export default function Home() {
           imgHREF='https://i.imgur.com/oUyrIZi.jpeg'
           title="Mantenimientos"
           description="Mantenemos tus equipos al 100 %: realizamos service completos de chiller, VRV/VRF y heladeras (incluyendo recambio de compresores), limpieza profunda de intercambiadores, revisión y ajuste de placas electrónicas y cambio de forzadores. Con nuestro plan de mantenimiento preventivo y correctivo, prolongamos la vida útil de tus sistemas, garantizando su rendimiento óptimo y eficiencia energética." />
-        <Gallery images={IMAGE_SRC} />
+        <Gallery images={images} />
         <Footer />
       </main>
     </>
