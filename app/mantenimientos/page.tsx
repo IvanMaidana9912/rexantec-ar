@@ -3,7 +3,7 @@ import {
   Hero,
   Footer,
 } from '../../components';
-import Gallery, { ImagesArray } from '@/components/Gallery';
+import Gallery from '@/components/Gallery';
 import images from '@/bbdd/IMAGE_SRC_M.json'; 
 
 import { Metadata } from 'next';
