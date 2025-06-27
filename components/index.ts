@@ -12,3 +12,4 @@ export { default as ClientAOS } from './ClientAOS';
 export { default as Gallery } from './Gallery';
 export { default as CatchAllErrors } from './CatchAllErrors';
 export { default as Supporters } from './Supporters';
+export { default as FireIceSection } from './FireIceSection';

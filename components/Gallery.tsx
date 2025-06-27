@@ -42,8 +42,8 @@ export default function Gallery({ images }: GalleryProps) {
   }, []);
 
   return (
-    <>
-      <section className="container mx-auto my-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 min-h-screen">
+    <div className='min-h-auto'>
+      <section className="container mx-auto my-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 h-auto">
         {images.map((img, i) => (
           <div
             key={i}
@@ -89,6 +89,6 @@ export default function Gallery({ images }: GalleryProps) {
           </div>
         </div>
       )}
-    </>
+    </div>
   )
 };
