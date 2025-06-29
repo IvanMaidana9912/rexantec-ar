@@ -19,9 +19,9 @@ interface Social {
 }
 
 const SOCIAL_LINK: Social[] = [
-  { href: '#', text: 'Instalaciones' },
-  { href: '#', text: 'Mantenimiento' },
-  { href: '#', text: 'Reparaciones' },
+  { href: '#I', text: 'Instalaciones' },
+  { href: '#M', text: 'Mantenimiento' },
+  { href: '#R', text: 'Reparaciones' },
 ];
 
 export default function Footer() {
