@@ -71,15 +71,15 @@ export default function Footer() {
           </ul>
         </div>
         <div className="flex flex-col items-center md:items-end text-center md:text-right space-y-4">
-          <div className="transition-transform duration-300 hover:scale-105 w-[90px] h-[90px] mx-auto md:mx-0">
-            <Image
-              src="/logo_sin_fondo_desde_negro.png"
-              alt="Logo Rexantec"
-              width={90}
-              height={90}
-              className="w-full h-full object-contain bg-white rounded-full p-1"
-              priority
-            />
+          <div className="transition-transform duration-300 hover:scale-105 w-[90px] h-[90px] mx-auto md:mx-0 rounded-full bg-white/80">
+              <Image
+                src="/logo_sin_fondo_desde_negro.png"
+                alt="Logo Rexantec"
+                width={90}
+                height={90}
+                className="w-full h-full object-contain p-3"
+                priority
+              />
           </div>
           <p>
             Encontranos en redes sociales:
