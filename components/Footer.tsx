@@ -19,9 +19,9 @@ interface Social {
 }
 
 const SOCIAL_LINK: Social[] = [
-  { href: '#instalaciones', text: 'Instalaciones' },
-  { href: '#mantenimiento', text: 'Mantenimiento' },
-  { href: '#reparaciones', text: 'Reparaciones' },
+  { href: '#', text: 'Instalaciones' },
+  { href: '#', text: 'Mantenimiento' },
+  { href: '#', text: 'Reparaciones' },
 ];
 
 export default function Footer() {
@@ -66,7 +66,7 @@ export default function Footer() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="inline-block pb-1 border-b-2 border-transparent hover:border-[#0f446ca1] transition">
+                  className="inline-block pb-1 border-b-2 cursor-default border-transparent"> {/* hover:border-[#0f446ca1] transition">*/}
                   {item.text}
                 </Link>
               </li>

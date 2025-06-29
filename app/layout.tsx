@@ -77,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="bg-[#0f446ca1] overflow-x-hidden">
+      <body className="bg-[#0f446ca1] overflow-x-hidden select-none">
         <CatchAllErrors>
           <ClientAOS />
           {children}
