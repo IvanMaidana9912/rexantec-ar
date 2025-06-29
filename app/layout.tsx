@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'Organization',
               name: 'Rexantec',
               url: 'https://www.rexantec.com.ar/',
-              logo: 'https://i.imgur.com/oRe3rLg.png',
+              logo: 'https://i.imgur.com/Cgf5Wnx.png',
               sameAs: [
                 'https://m.facebook.com/100083022592038/',
                 'https://www.instagram.com/rexantec_servicios',
