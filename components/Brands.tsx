@@ -1,27 +1,8 @@
-'use client'; //Acá...
+'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
-
-interface Logos {
-  name: string;
-  href: string;
-};
-
-const LOGOS: Logos[] = [
-  { name: 'bgh',       href: 'https://www.bgh.com.ar/climatizacion/aires-acondicionados-split' },
-  { name: 'blue-star', href: 'https://www.bluestarcooking.com/' },
-  { name: 'carrier',   href: 'https://www.carrier.com/residential/en/us/products/air-conditioners/' },
-  { name: 'daikin',    href: 'https://daikin-argentina.com/' },
-  { name: 'hisense',   href: 'https://global.hisense.com/air-conditioner' },
-  { name: 'hitachi',   href: 'https://www.hitachiaircon.com/' },
-  { name: 'lg',        href: 'https://www.lg.com/ar/aire-acondicionado' },
-  { name: 'midea',     href: 'https://www.midea.com/cl/aireacondicionado' },
-  { name: 'samsung',   href: 'https://www.samsung.com/ar/air-conditioners/all-air-conditioners/' },
-  { name: 'tadiran',   href: 'https://www.tadiran-argentina.com/' },
-  { name: 'toshiba',   href: 'https://www.toshiba-aircon.com.ar/' },
-  { name: 'westric',   href: 'https://westric.com/' },
-];
+import LOGOS from '../bbdd/LOGOS_BRANDS.json'
 
 export default function Brands() {
   return (

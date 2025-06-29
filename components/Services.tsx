@@ -1,20 +1,8 @@
-'use client'; //Acá...
+'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
-
-interface ServicesItems {
-  title: string;
-  description: string;
-};
-
-const SERVICES: ServicesItems[] = [
-  { title: 'Instalación de equipos', description: 'Aires acondicionados centrales y VRV.' },
-  { title: 'Arreglos generales', description: 'Resolvemos cualquier imprevisto técnico.' },
-  { title: 'Mantenimiento', description: 'Servicio de mantenimiento integral.' },
-  { title: 'Abono mensual', description: 'Te ofrecemos un pago mensual para el mantenimiento acorde a tus necesidades.' },
-];
-
+import SERVICES from '../bbdd/SERVICES.json'
 
 export default function Services() {
   return (

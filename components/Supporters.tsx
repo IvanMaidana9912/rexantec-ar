@@ -1,30 +1,13 @@
-'use client'; //Acá...
+'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import AOS from 'aos';
-
-interface Supporter {
-  src: string;
-  alt: string;
-  href: string;
-};
-
-const SUPPORTERS: Supporter[] = [
-  { src: '/images/supporters/airmz.jpeg', alt: 'AirMZ', href: 'https://www.instagram.com/airmzrefrigeracion?igsh=MTdzMjVraGzsMm44aA==' },
-  { src: '/images/supporters/alto-palermo.jpeg', alt: 'Alto Palermo', href: 'https://www.altopalermo.com.ar/' },
-  { src: '/images/supporters/bsvrv.png', alt: 'BSVRV', href: 'https://www.instagram.com/buenosairesvrv?igsh=dnJsdHpoYTlyMzl4' },
-  { src: '/images/supporters/cmr.jpeg', alt: 'CMR', href: 'http://countrymirefugio.com/#!/-bienvenido/' },
-  { src: '/images/supporters/edelap.jpg', alt: 'Edelap', href: 'https://www.edelap.com.ar/' },
-  { src: '/images/supporters/gentec.jpeg', alt: 'GenTec', href: 'https://www.gentecinstalaciones.com.ar/' },
-  { src: '/images/supporters/gs.jpg', alt: 'BSVRV', href: 'https://www.instagram.com/dandygabriel?igsh=eHlvMGp0YXFtNWZ5' },
-  { src: '/images/supporters/ingem.jpg', alt: 'Logo XYZ', href: 'https://www.instagram.com/ingemaireacondicionado?igsh=Y3EzeWlwY3J2bGxu' },
-];
+import SUPPORTERS from '../bbdd/SUPPORTERS.json'
 
 export default function Supporters() {
   useEffect(() => {
-    // Re-registramos AOS una vez que este componente ya está montado y listo
     AOS.refresh();
   }, []);
 

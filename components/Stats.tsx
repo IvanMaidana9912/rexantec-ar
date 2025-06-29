@@ -2,20 +2,7 @@
 
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
-
-interface Items {
-  end: number;
-  suffix: string;
-  label: string;
-};
-
-const ITEMS_STATS: Items[] = [
-  { end: 250, suffix: '+', label: 'Instalaciones' },
-  { end: 160, suffix: '+', label: 'Clientes satisfechos' },
-  { end: 15, suffix: '', label: 'Reseñas en Google' },
-  { end: 7, suffix: '+', label: 'Empresas corporativas' },
-];
-
+import ITEMS_STATS from '../bbdd/ITEMS_STATS.json'
 
 export default function Stats() {
 

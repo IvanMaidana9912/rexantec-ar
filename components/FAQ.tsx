@@ -1,31 +1,9 @@
-'use client'; //Acá...
+'use client';
 
 import { useState } from 'react';
 import Image from 'next/image';
 import { FaPlus, FaTimes } from 'react-icons/fa';
-
-const faqItems = [
-  {
-    question: '¿Tiene garantía?',
-    answer:
-      'Sí, todos los equipos y trabajos realizados por nuestro equipo tienen garantía.',
-  },
-  {
-    question: '¿Qué incluye el presupuesto?',
-    answer:
-      'Nuestro presupuesto incluye la mano de obra y el material de trabajo. Te brindamos nuestros productos para trabajar o podés gestionar la compra por tu cuenta.',
-  },
-  {
-    question: '¿Se cobra la visita?',
-    answer:
-      'Sí, nuestra visita técnica contempla un valor que cubre diagnóstico, asesoramiento profesional y traslado, y puede ser bonificado si se contrata el servicio.',
-  },
-  {
-    question: '¿Qué tipo de instalaciones hacemos?',
-    answer:
-      'Nos dedicamos al rubro termomecánico, por lo que no realizamos instalaciones domésticas tradicionales. Si contás con un espacio comercial o profesional amplio, consultanos sin problema.',
-  },
-];
+import faqItems from '../bbdd/FAQ_QUESTION_ANSWER.json'
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
