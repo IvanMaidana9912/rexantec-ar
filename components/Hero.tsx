@@ -35,7 +35,7 @@ export default function Hero({
           {description}
         </p>
         <a
-          href="https://wa.me/5491158947428?text=Hola%20Rexantec%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto%20sobre%3A%20%0AY%20estas%20son%20las%20fotos7videos%3A"
+          href="https://wa.me/5491158947428?text=Hola%20Rexantec%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto%20sobre%3A%20%0AEstas%20son%20las%20fotos%20y/o%20videos%3A"
           className="inline-block bg-green-600 hover:bg-green-700 text-white font-medium rounded px-5 py-2 text-base sm:text-lg transition w-1/2 mx-auto lg:mx-0 lg:w-1/6 text-center"
           target="_blank">
           Chatear con Rexantec

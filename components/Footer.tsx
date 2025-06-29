@@ -1,14 +1,22 @@
-'use client'; //Acá...
+'use client';
 
 import Link from 'next/link';
-import { FaFacebookF, FaEnvelope, FaInstagram, FaTiktok, FaWhatsapp, FaInfo, FaYoutube } from 'react-icons/fa';
+import Image from 'next/image';
+import {
+  FaFacebookF,
+  FaEnvelope,
+  FaInstagram,
+  FaTiktok,
+  FaWhatsapp,
+  FaInfo,
+  FaYoutube
+} from 'react-icons/fa';
 import { FaLocationPin } from 'react-icons/fa6';
-
 
 interface Social {
   href: string;
   text: string;
-};
+}
 
 const SOCIAL_LINK: Social[] = [
   { href: '#instalaciones', text: 'Instalaciones' },
@@ -28,6 +36,7 @@ export default function Footer() {
         </svg>
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-0 grid grid-cols-1 md:grid-cols-3 gap-12 pb-8">
+        {/* Info de contacto */}
         <div className="space-y-3 text-center md:text-left">
           <h3 className="text-xl font-bold mb-2">Info de contacto</h3>
           <p className='inline-flex items-center'>
@@ -42,12 +51,14 @@ export default function Footer() {
           </p>
           <p>
             <Link
-              href="https://wa.me/5491158947428?text=Hola%20Rexantec%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto%20sobre%3A%20%0AY%20estas%20son%20las%20fotos7videos%3A"
+              href="https://wa.me/5491158947428?text=Hola%20Rexantec%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto%20sobre%3A%20%0AEstas%20son%20las%20fotos%20y/o%20videos%3A"
               className="inline-flex items-center hover:text-red-100 transition">
               <FaWhatsapp className="mr-2 " />+54 9 11 5894 7428
             </Link>
           </p>
         </div>
+
+        {/* Servicios */}
         <div className="text-center">
           <h3 className="text-xl font-bold mb-2">Servicios</h3>
           <ul className="space-y-2">
@@ -62,10 +73,19 @@ export default function Footer() {
             ))}
           </ul>
         </div>
+
+        {/* Redes sociales + Logo */}
         <div className="flex flex-col items-center md:items-end text-center md:text-right space-y-4">
-          <span className="text-3xl font-extrabold">
-            Rexantec
-          </span>
+          <div className="transition-transform duration-300 hover:scale-105 w-[90px] h-[90px] mx-auto md:mx-0">
+            <Image
+              src="/logo_sin_fondo_desde_negro.png"
+              alt="Logo Rexantec"
+              width={90}
+              height={90}
+              className="w-full h-full object-contain bg-white rounded-full"
+              priority
+            />
+          </div>
           <p>
             Encontranos en redes sociales:
           </p>
@@ -89,6 +109,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Footer inferior */}
       <div className="border-t border-[#E22128] opacity-50" />
       <div className="mx-4 text-center text-sm text-red-200 py-6">
         <div className='flex flex-col'>

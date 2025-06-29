@@ -47,7 +47,7 @@ export default function Gallery({ images }: GalleryProps) {
         {images.map((img, i) => (
           <div
             key={i}
-            className="cursor-pointer overflow-hidden lg:rounded-2xl shadow-lg"
+            className="cursor-pointer overflow-hidden rounded-xl shadow-lg"
             onClick={() => openModal(i)}>
             <Image
               src={img.SrcI}
@@ -72,14 +72,14 @@ export default function Gallery({ images }: GalleryProps) {
               <FaTimes size={20} />
             </button>
             <div
-              className="w-full h-full flex items-center justify-center"
+              className="w-full h-full flex items-center justify-center rounded-xl"
               onWheel={onWheel}>
               <Image
                 src={images[selected].SrcI}
                 alt={images[selected].AltI}
                 width={800}
                 height={600}
-                className="object-contain rounded-2xl"
+                className="object-fill"
                 style={{
                   transform: `scale(${scale})`,
                   transition: 'transform 0.1s ease-out'
