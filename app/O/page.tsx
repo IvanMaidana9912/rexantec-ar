@@ -27,5 +27,5 @@ export default function Home() {
         <Gallery images={IMAGE_SRC} />
       </main>
     </>
-  );
-}
+  )
+};

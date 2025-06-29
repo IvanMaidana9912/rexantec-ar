@@ -1,4 +1,3 @@
- //Acá...
 import {
   Navbar,
   Hero,

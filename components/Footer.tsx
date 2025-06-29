@@ -36,7 +36,6 @@ export default function Footer() {
         </svg>
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-0 grid grid-cols-1 md:grid-cols-3 gap-12 pb-8">
-        {/* Info de contacto */}
         <div className="space-y-3 text-center md:text-left">
           <h3 className="text-xl font-bold mb-2">Info de contacto</h3>
           <p className='inline-flex items-center'>
@@ -57,8 +56,6 @@ export default function Footer() {
             </Link>
           </p>
         </div>
-
-        {/* Servicios */}
         <div className="text-center">
           <h3 className="text-xl font-bold mb-2">Servicios</h3>
           <ul className="space-y-2">
@@ -73,8 +70,6 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-
-        {/* Redes sociales + Logo */}
         <div className="flex flex-col items-center md:items-end text-center md:text-right space-y-4">
           <div className="transition-transform duration-300 hover:scale-105 w-[90px] h-[90px] mx-auto md:mx-0">
             <Image
@@ -82,7 +77,7 @@ export default function Footer() {
               alt="Logo Rexantec"
               width={90}
               height={90}
-              className="w-full h-full object-contain bg-white rounded-full"
+              className="w-full h-full object-contain bg-white rounded-full p-1"
               priority
             />
           </div>
@@ -109,8 +104,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      {/* Footer inferior */}
       <div className="border-t border-[#E22128] opacity-50" />
       <div className="mx-4 text-center text-sm text-red-200 py-6">
         <div className='flex flex-col'>
