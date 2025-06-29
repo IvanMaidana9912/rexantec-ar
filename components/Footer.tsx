@@ -8,8 +8,8 @@ import {
   FaInstagram,
   FaTiktok,
   FaWhatsapp,
-  FaInfo,
-  FaYoutube
+  FaYoutube,
+  FaMailBulk
 } from 'react-icons/fa';
 import { FaLocationPin } from 'react-icons/fa6';
 
@@ -39,13 +39,19 @@ export default function Footer() {
         <div className="space-y-3 text-center md:text-left">
           <h3 className="text-xl font-bold mb-2">Info de contacto</h3>
           <p className='inline-flex items-center'>
-            <FaLocationPin className="mr-2" />Bernal Oeste, Zona Sur, Argentina.
+            <Link
+              href="https://www.google.com.ar/maps/place/Tri%C3%A1ngulo+de+Bernal/@-34.7039116,-58.2940377,14z/data=!4m15!1m8!3m7!1s0x95a331fdc70bdd5d:0x6c702cf3f15dabac!2sBernal,+Provincia+de+Buenos+Aires!3b1!8m2!3d-34.7088552!4d-58.2826616!16s%2Fm%2F02wwlws!3m5!1s0x95a333c2cc669579:0xd3c0969cdbb40ce2!8m2!3d-34.7104272!4d-58.3103996!16s%2Fg%2F11h70hc9mk?hl=es&entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              className="text-white hover:text-red-100 transition"
+            >
+              <FaLocationPin className="mr-2 inline-flex items-center" />Bernal Oeste, Zona Sur, Argentina.
+            </Link>
           </p>
           <p>
             <Link
               href="mailto:rexantecservicios@gmail.com.ar"
               className="hover:text-red-100 transition">
-              <FaInfo className="mr-2 inline-flex items-center" />rexantecservicios@gmail.com.ar
+              <FaMailBulk className="mr-2 inline-flex items-center" />rexantecservicios@gmail.com.ar
             </Link>
           </p>
           <p>
@@ -72,14 +78,14 @@ export default function Footer() {
         </div>
         <div className="flex flex-col items-center md:items-end text-center md:text-right space-y-4">
           <div className="transition-transform duration-300 hover:scale-105 w-[90px] h-[90px] mx-auto md:mx-0 rounded-full bg-white/80">
-              <Image
-                src="/logo_sin_fondo_desde_negro.png"
-                alt="Logo Rexantec"
-                width={90}
-                height={90}
-                className="w-full h-full object-contain p-3"
-                priority
-              />
+            <Image
+              src="/logo_sin_fondo_desde_negro.png"
+              alt="Logo Rexantec"
+              width={90}
+              height={90}
+              className="w-full h-full object-contain p-3"
+              priority
+            />
           </div>
           <p>
             Encontranos en redes sociales:
