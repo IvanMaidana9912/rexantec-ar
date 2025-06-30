@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaWhatsapp } from 'react-icons/fa';
+import WppButtom from './WppButtom';
 
 interface NavLink {
   href: string;
@@ -57,12 +58,7 @@ export default function Navbar() {
                 {label}
               </Link>
             ))}
-            <Link
-              href="https://wa.me/5491158947428?text=Hola%20Rexantec%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto%20sobre%3A%20%0AEstas%20son%20las%20fotos%20y/o%20videos%3A"
-              target="_blank"
-              className="inline-flex items-center px-4 py-2 bg-green-500 hover:bg-green-600 transition text-white font-semibold rounded-lg">
-              Chatear con Rexantec
-            </Link>
+            <WppButtom />
           </div>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -106,7 +102,7 @@ export default function Navbar() {
             target="_blank"
             onClick={() => setMenuOpen(false)}
             className="mt-4 inline-flex items-center justify-center px-4 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition">
-            Chatear con Rexantec
+            <FaWhatsapp className="mr-3" />Chatear con Rexantec
           </Link>
         </div>
       </div>

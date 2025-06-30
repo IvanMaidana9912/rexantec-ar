@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
               width={48}
               height={48}
               className="mx-auto mb-4"/>
-            <h3 className="text-xl font-semibold text-white mb-2">Garantía</h3>
+            <h3 className="text-xl font-bold text-black mb-2">Garantía</h3>
             <p className="text-white text-sm">
               Proveemos en todos nuestros equipos y servicios garantía total con el mejor servicio de atención al cliente.
             </p>
@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
               width={48}
               height={48}
               className="mx-auto mb-4"/>
-            <h3 className="text-xl font-semibold text-white mb-2">Profesionales</h3>
+            <h3 className="text-xl font-bold text-black mb-2">Profesionales</h3>
             <p className="text-white text-sm">
               Contarás con un equipo de profesionales para diseñar y presupuestar la climatización de tu espacio.
             </p>
@@ -49,7 +49,7 @@ export default function WhyChooseUs() {
               width={48}
               height={48}
               className="mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">Trayectoria</h3>
+            <h3 className="text-xl font-bold text-black mb-2">Trayectoria</h3>
             <p className="text-white text-sm">
               Nos dedicamos a la climatización de espacios desde 2020, tendrás a tu disposición toda nuestra experiencia.
             </p>

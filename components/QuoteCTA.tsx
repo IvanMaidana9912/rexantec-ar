@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaWhatsapp } from 'react-icons/fa';
+import WppButtom from './WppButtom';
 
 export default function QuoteCTA() {
   return (
@@ -39,15 +40,8 @@ export default function QuoteCTA() {
             Hacenos tu consulta online por cualquiera de nuestras vías de
             comunicación. Estamos disponibles todos los días de 9 AM a 18 PM.
           </p>
-          <div className="flex justify-center md:justify-start">
-            <Link
-              href="https://wa.me/5491158947428?text=Hola%20Rexantec%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto%20sobre%3A%20%0AY%20estas%20son%20las%20fotos7videos%3A"
-              target="_blank"
-              className="inline-flex items-center bg-green-500 hover:bg-green-600 transition px-5 py-3 rounded-lg text-white"
-              data-aos="fade-right"
-              data-aos-delay="500">
-              <FaWhatsapp className="mr-3" /> Chatear con Rexantec
-            </Link>
+          <div className="flex justify-center md:justify-start" data-aos="fade-right" data-aos-delay="400">
+            <WppButtom />
           </div>
         </div>
       </div>

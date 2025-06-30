@@ -39,7 +39,7 @@ export default function Services() {
               SERVICES.map((item, i) => (
                 <div key={item.title} data-aos="fade-up" data-aos-delay={`${200 + i * 100}`}>
                   <div className="w-12 sm:w-16 h-1 bg-[#E22128] mb-2" />
-                  <h3 className="text-lg sm:text-xl font-semibold text-black mb-1">
+                  <h3 className="text-lg sm:text-xl font-bold text-black mb-1">
                     {item.title}
                   </h3>
                   <p className="text-sm sm:text-base text-white">
