@@ -1,8 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
-import { FaWhatsapp } from 'react-icons/fa';
 import WppButtom from './WppButtom';
 
 export default function QuoteCTA() {
