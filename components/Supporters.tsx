@@ -19,7 +19,7 @@ export default function Supporters() {
         <h2
           className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-8 lg:mb-20 sm:mb-8 md:mb-12 pb-6 sm:pb-8 md:pb-20"
           data-aos="fade-down">
-          Empresas que nos apoyan
+          Empresas que confían en nosotros
         </h2>
         <div className=" grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-8 items-center justify-items-center">
           {SUPPORTERS.map(({ src, alt, href }, i) => (

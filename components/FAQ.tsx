@@ -14,16 +14,16 @@ export default function FAQ() {
         className="text-center mb-12 px-4 sm:px-6 lg:px-0"
         data-aos="fade-left">
         <h2
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-8 lg:mb-20 pb-6"
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black "
           data-aos="fade-down">
           Preguntas frecuentes
         </h2>
-        <p className="mt-2 text-base text-white max-w-2xl mx-auto">
+        {/* <p className="mt-2 text-base text-white max-w-2xl mx-auto">
           No te quedes con dudas; en esta sección podrás ver las consultas más
           frecuentes que recibimos para que tengas toda la información sobre
           nuestra forma de trabajar.
-        </p>
-        <div className="mt-4 w-60 h-1 bg-[#E22128] mx-auto rounded" />
+        </p> */}
+        <div className="mt-1 w-60 h-1 bg-[#E22128] mx-auto rounded" />
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-0">
         <div

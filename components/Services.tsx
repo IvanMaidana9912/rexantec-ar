@@ -12,20 +12,20 @@ export default function Services() {
           data-aos="fade-right"
           data-aos-offset="200"
           className={`relative flex-shrink-0 w-full sm:w-[380px] h-64 sm:h-[598px] overflow-hidden mx-auto rounded-2xl flex justify-center`}>
-          <Link href="/proyectos" className="w-[380px] h-[555px] absolute rounded-xl">
+          <div className="w-[380px] h-[555px] absolute rounded-xl">
             <Image
               src="/images/image-40.jpg"
               alt="Instalación de equipos"
               fill
               className="object-cover rounded-2xl"
             />
-          </Link>
-          <div
+          </div>
+          <Link href="/proyectos"
             data-aos="fade-up"
             data-aos-delay="200"
             className={`absolute bottom-6 sm:bottom-10 left-10/12 sm:left-1/2 transform sm:-translate-x-1/2 -translate-x-48 translate-y-1/2 bg-[#E22128] text-white uppercase text-sm font-bold tracking-wider px-6 sm:px-12 py-4 sm:py-8 w-[240px] sm:w-64 rounded-br-full rounded-tl-full text-center`}>
             Proyectos Realizados
-          </div>
+          </Link>
         </div>
         <div
           data-aos="fade-left"

@@ -22,10 +22,10 @@ export default function WhyChooseUs() {
               alt="Garantía"
               width={48}
               height={48}
-              className="mx-auto mb-4"/>
+              className="mx-auto mb-4" />
             <h3 className="text-xl font-bold text-black mb-2">Garantía</h3>
             <p className="text-white text-sm">
-              Proveemos en todos nuestros equipos y servicios garantía total con el mejor servicio de atención al cliente.
+              Te ofrecemos garantía total de los equipos y servicios brindados.
             </p>
           </div>
           {/* tarjeta 2 */}
@@ -35,10 +35,10 @@ export default function WhyChooseUs() {
               alt="Profesionales"
               width={48}
               height={48}
-              className="mx-auto mb-4"/>
+              className="mx-auto mb-4" />
             <h3 className="text-xl font-bold text-black mb-2">Profesionales</h3>
             <p className="text-white text-sm">
-              Contarás con un equipo de profesionales para diseñar y presupuestar la climatización de tu espacio.
+              Tenemos un equipo altamente capacitado para reparar, instalar y mantener la climatización de tu espacio.
             </p>
           </div>
           {/* tarjeta 3 */}
