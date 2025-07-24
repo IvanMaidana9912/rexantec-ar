@@ -101,6 +101,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 'https://m.facebook.com/100083022592038/',
                 'https://www.instagram.com/rexantec_servicios',
                 'https://youtube.com/@rexantec-f8x',
+                'mailto:rexantecservicios@gmail.com',
+                'https://api.whatsapp.com/send/?phone=5491158947428&text=Hola+Rexantec%2C+me+gustar%C3%ADa+solicitar+un+presupuesto+sobre%3A+%0AEstas+son+las+fotos+y%2Fo+videos%3A&type=phone_number&app_absent=0'
               ],
             }),
           }}
