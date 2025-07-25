@@ -1,0 +1,29 @@
+[
+    {
+        "CINTAS": {
+            "name": "Barrio Parque (2)",
+            "description": "Refacciones varias (Electricidad, Sistema Caldera Trifasica, Iluminacion, AA Mini Splits y sistema de camaras).",
+            "img": "https://i.imgur.com/k6GQUvG.jpeg",
+            "downloadUrl": "https://drive.google.com/uc?export=download&id=1JXbdYzOUk7RqxCqYMzq1IP2N3Mt8iW1J",
+            "content": [
+                "Rollos Leds",
+                "Kits RGB Y Lámparas",
+                "Rollos Leds",
+                "Kits RGB Y Lámparas"
+            ],
+            "list_of_types": {}
+        },
+        "CONTROLADORAS": {
+            "name": "Heladeria Altri",
+            "description": "Instalación de Mini Split 5500F",
+            "img": "https://i.imgur.com/adBwWro.jpeg",
+            "downloadUrl": "https://i.imgur.com/SCZnoDn.jpeg",
+            "content": [
+                "Rollos Leds",
+                "Kits RGB Y Lámparas",
+                "Módulos Led (12V)"
+            ],
+            "list_of_types": {}
+        }
+    }
+]

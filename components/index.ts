@@ -14,3 +14,4 @@ export { default as CatchAllErrors } from './CatchAllErrors';
 export { default as Supporters } from './Supporters';
 export { default as FireIceSection } from './FireIceSection';
 export { default as WppButtom } from './WppButtom';
+export { default as ImageCard } from './ImageCard';
