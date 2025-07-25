@@ -98,7 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               gtag('js', new Date());
               gtag('config', 'AW-17385788973');
             `,
-          }}/>
+          }} />
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-1G3S8YD5F8" />
         <script
@@ -108,7 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               function gtag(){dataLayer.push(arguments);}  
               gtag('js', new Date());
               gtag('config', 'G-1G3S8YD5F8');`,
-          }}/>
+          }} />
 
         <script
           dangerouslySetInnerHTML={{
@@ -128,7 +128,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             src="https://www.googletagmanager.com/ns.html?id=GTM-WX4QZRV6"
             height="0"
             width="0"
-            style={{ display: 'none', visibility: 'hidden' }}/>
+            style={{ display: 'none', visibility: 'hidden' }} />
         </noscript>
         <CatchAllErrors>
           <ClientAOS />

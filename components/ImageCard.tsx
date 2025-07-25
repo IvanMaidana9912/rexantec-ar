@@ -8,8 +8,8 @@ export interface ImageCardProps {
   imageSrc: string
   srcLink: string      // enlace al PDF
   alt?: string
-  name: string         // título
-  description: string  // descripción
+  title: string         // título
+  Sdescription: string  // descripción
   counts: number       // cantidad de productos
 };
 
@@ -17,8 +17,8 @@ const ImageCard: FC<ImageCardProps> = ({
   imageSrc,
   srcLink,
   alt = 'Imagen',
-  name,
-  description,
+  title,
+  Sdescription,
   counts
 }) => {
   return (
@@ -34,10 +34,10 @@ const ImageCard: FC<ImageCardProps> = ({
         <div className=" absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300" />
         <div className="absolute inset-0 flex flex-col justify-end p-4 space-y-2">
           <h3 className=" text-lg font-semibold text-transparent group-hover:text-white transition-colors duration-300">
-            {name}
+            {title}
           </h3>
           <p className=" text-sm text-transparent group-hover:text-white transition-colors duration-300 line-clamp-2">
-            {description}
+            {Sdescription}
           </p>
           <p className=" text-xs font-light text-transparent group-hover:text-white transition-colors duration-300">
             {counts} {counts === 1 ? 'Foto' : 'Fotos'}
@@ -62,10 +62,10 @@ const ImageCard: FC<ImageCardProps> = ({
         </div>
         <div className="p-4 flex flex-col space-y-2">
           <h3 className="text-lg font-semibold text-black md:group-hover:text-white transition-colors duration-300">
-            {name}
+            {title}
           </h3>
           <p className="text-sm text-gray-700 md:group-hover:text-white transition-colors duration-300 line-clamp-2">
-            {description}
+            {Sdescription}
           </p>
 
           <p className="text-xs font-light text-gray-600 md:group-hover:text-white transition-colors duration-300">
@@ -76,7 +76,7 @@ const ImageCard: FC<ImageCardProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             className="mt-auto block w-full text-center bg-black text-white py-2 rounded transition-opacity duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 hover:bg-gray-800">
-            Descargar Catálogo
+            Ver Proyecto
           </Link>
         </div>
       </div>
