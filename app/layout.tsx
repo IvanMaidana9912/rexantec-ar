@@ -87,6 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="article:publisher" content="https://m.facebook.com/100083022592038/" />
         <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
         <meta property="og:updated_time" content={String(updatedTimestamp)} />
+        <link rel="canonical" href="https://www.rexantec.com.ar/" />
         <link rel="me" href="https://www.instagram.com/rexantec_servicios" />
         <link rel="me" href="https://m.facebook.com/100083022592038/" />
         <link rel="me" href="https://youtube.com/@rexantec-f8x" />
