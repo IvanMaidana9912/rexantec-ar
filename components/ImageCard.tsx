@@ -43,7 +43,7 @@ export default function ImageCard({ images, dynamicRoute, alt, title, Sdescripti
   };
 
   return (
-    <>
+    <div className='min-h-screen mt-10'>
       {/* CARD Desktop */}
       <div className="xl:block hidden group relative w-full sm:w-80 md:w-72 rounded-lg overflow-hidden shadow-lg transition-shadow hover:shadow-2xl">
         <div className="relative w-full h-48 sm:h-56 md:h-64">
@@ -151,6 +151,6 @@ export default function ImageCard({ images, dynamicRoute, alt, title, Sdescripti
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
