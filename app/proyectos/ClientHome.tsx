@@ -1,7 +1,7 @@
 'use client';
 import {
     Navbar, Hero, Footer,
-} from '@/components';
+} from '../../components';
 import ImageCard from '../../components/ImageCard';
 import rawData from '../../bbdd/IMG_P.json';
 import { Project, ProjectsJSON } from '../../utils/types';
