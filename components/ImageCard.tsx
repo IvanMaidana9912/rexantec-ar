@@ -64,7 +64,7 @@ export default function ImageCard({ images, dynamicRoute, alt, title, Sdescripti
     return (
         <div className="min-h-screen mt-10">
             {/* CARD Desktop */}
-            <div className="hidden xl:block group relative w-full max-w-xs h-80 rounded-lg overflow-hidden shadow-lg transition-shadow hover:shadow-2xl">
+            <div className="hidden xl:block group relative w-full sm:w-80 md:w-96 lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem] bg-white rounded-lg overflow-hidden shadow-lg transition-shadow hover:shadow-2xl h-[20rem] sm:h-[22rem] md:h-[24rem] lg:h-[26rem] xl:h-[28rem]">
                 <div className="relative w-full h-full z-10">
                     <Image
                         src={images[0].SrcI}
@@ -93,7 +93,7 @@ export default function ImageCard({ images, dynamicRoute, alt, title, Sdescripti
             </div>
 
             {/* CARD Mobile */}
-            <div className="xl:hidden group relative w-full max-w-xs bg-white rounded-lg overflow-hidden shadow-lg transition-shadow hover:shadow-2xl h-80">
+            <div className="xl:hidden group group relative w-full sm:w-80 md:w-96 lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem] bg-white rounded-lg overflow-hidden shadow-lg transition-shadow hover:shadow-2xl  h-[20rem] sm:h-[22rem] md:h-[24rem] lg:h-[26rem] xl:h-[28rem]">
                 <div className="relative w-full h-48">
                     <Image
                         src={images[0].SrcI}

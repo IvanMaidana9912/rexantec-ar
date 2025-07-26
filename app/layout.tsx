@@ -75,14 +75,14 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const updatedTimestamp = Math.floor(Date.now() / 1000);
+  //const updatedTimestamp = Math.floor(Date.now() / 1000);
 
   return (
     <html lang="es-419">
       <head>
         <meta property="article:publisher" content="https://m.facebook.com/100083022592038/" />
         <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
-        <meta property="og:updated_time" content={String(updatedTimestamp)} />
+        {/* <meta property="og:updated_time" content={String(updatedTimestamp)} /> */}
         <link rel="canonical" href="https://www.rexantec.com.ar/" />
         <link rel="me" href="https://www.instagram.com/rexantec_servicios" />
         <link rel="me" href="https://m.facebook.com/100083022592038/" />
