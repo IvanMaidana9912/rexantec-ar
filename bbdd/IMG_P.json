@@ -1,37 +1,41 @@
 [
-    {
-        "proyectos": [
-            {
-                "id": "k6GQUvG",
-                "title": "Barrio Parque (2)",
-                "Sdescription": "Refacciones varias (Electricidad, Sistema Caldera Trifasica, Iluminacion, AA Mini Splits y sistema de camaras).",
-                "Ldescription": "Robot de soldadura avanzado con control EtherCAT y software intuitivo. Capaz de interpolar ejes simultáneamente, ofrece una repetitividad cada 0.02 mm y una velocidad máxima de 2 m/s. Construido con una estructura robusta de perfilería de acero de ¼ y 5/16 de espesor. Equipado con una pantalla táctil HMI de 19 pulgadas y un SMART TOUCH de 10 pulgadas. Diseñado para procesos de soldadura, permite la conexión vía EtherCAT con la fuente de soldadura y el control de JOB programables",
-                "IMG": "https://i.imgur.com/k6GQUvG.jpeg",
-                "IMG-2": "https://i.imgur.com/k6GQUvG.jpeg",
-                "href": "/proyectos/p/k6GQUvG",
-                "content": [
-                    "Rollos Leds",
-                    "Kits RGB Y Lámparas",
-                    "Rollos Leds",
-                    "Kits RGB Y Lámparas"
-                ],
-                "list_of_types": {}
-            },
-            {
-                "id": "adBwWro",
-                "title": "Heladeria Altri",
-                "Sdescription": "Instalación de Mini Split 5500F",
-                "Ldescription": "Robot Cartesiano Modelo: ZCIT00M con control EtherCAT y software intuitivo. Capaz de interpolar ejes simultáneamente, ofrece una repetitividad de 0.02 mm y una velocidad máxima de 2 m/s. Construido con una estructura robusta de perfilería de acero de ¼ y 5/16 de espesor. Equipado con una pantalla táctil HMI de 19 pulgadas y un SMART TOUCH de 10 pulgadas. Diseñado específicamente para procesos de inyección, con conexión Euromap.",
-                "IMG": "https://i.imgur.com/adBwWro.jpeg",
-                "IMG-2": "https://i.imgur.com/adBwWro.jpeg",
-                "href": "/proyectos/p/adBwWro",
-                "content": [
-                    "Rollos Leds",
-                    "Kits RGB Y Lámparas",
-                    "Módulos Led (12V)"
-                ],
-                "list_of_types": {}
-            }
-        ]
-    }
+  {
+    "proyectos": [
+      {
+        "id": "k6GQUvG",
+        "title": "Barrio Parque (2)",
+        "Sdescription": "Refacciones varias (Electricidad, Sistema Caldera Trifasica, Iluminacion, AA Mini Splits y sistema de camaras).",
+        "Ldescription": "Robot de soldadura avanzado con control EtherCAT y software intuitivo. Capaz de interpolar ejes simultáneamente, ofrece una repetitividad cada 0.02 mm y una velocidad máxima de 2 m/s. Construido con una estructura robusta de perfilería de acero de ¼ y 5/16 de espesor. Equipado con una pantalla táctil HMI de 19 pulgadas y un SMART TOUCH de 10 pulgadas. Diseñado para procesos de soldadura, permite la conexión vía EtherCAT con la fuente de soldadura y el control de JOB programables",
+        "images": [
+          "https://i.imgur.com/k6GQUvG.jpeg",
+          "https://i.imgur.com/ZNA9a19.jpeg",
+          "https://i.imgur.com/QR9ps4H.jpeg"
+        ],
+        "href": "/proyectos/k6GQUvG",
+        "content": [
+          "Rollos Leds",
+          "Kits RGB Y Lámparas",
+          "Rollos Leds",
+          "Kits RGB Y Lámparas"
+        ],
+        "list_of_types": {}
+      },
+      {
+        "id": "adBwWro",
+        "title": "Heladeria Altri",
+        "Sdescription": "Instalación de Mini Split 5500F",
+        "Ldescription": "Robot Cartesiano Modelo: ZCIT00M con control EtherCAT y software intuitivo. Capaz de interpolar ejes simultáneamente, ofrece una repetitividad de 0.02 mm y una velocidad máxima de 2 m/s. Construido con una estructura robusta de perfilería de acero de ¼ y 5/16 de espesor. Equipado con una pantalla táctil HMI de 19 pulgadas y un SMART TOUCH de 10 pulgadas. Diseñado específicamente para procesos de inyección, con conexión Euromap.",
+        "images": [
+          "https://i.imgur.com/adBwWro.jpeg"
+        ],
+        "href": "/proyectos/adBwWro",
+        "content": [
+          "Rollos Leds",
+          "Kits RGB Y Lámparas",
+          "Módulos Led (12V)"
+        ],
+        "list_of_types": {}
+      }
+    ]
+  }
 ]

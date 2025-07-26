@@ -1,87 +1,156 @@
 'use client';
-
+import React, { useState, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FC } from 'react';
+import { FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+
+export interface ImagesArray {
+  SrcI: string;
+  AltI: string;
+}
 
 export interface ImageCardProps {
-  imageSrc: string
-  srcLink: string      // enlace al PDF
-  alt?: string
-  title: string         // título
-  Sdescription: string  // descripción
-  counts: number       // cantidad de productos
-};
+  images: ImagesArray[];      // array de imágenes del proyecto
+  dynamicRoute: string;       // ruta dinámica, e.g. `/proyectos/p/001`
+  alt?: string;
+  title: string;
+  Sdescription: string;
+}
 
-const ImageCard: FC<ImageCardProps> = ({
-  imageSrc,
-  srcLink,
-  alt = 'Imagen',
-  title,
-  Sdescription,
-  counts
-}) => {
+export default function ImageCard({ images, dynamicRoute, alt, title, Sdescription }: ImageCardProps) {
+  const [selected, setSelected] = useState<number | null>(null);
+
+  // Abrir modal en primera imagen
+  const openModal = useCallback((idx = 0) => {
+    setSelected(idx);
+    document.body.style.overflow = 'hidden';
+  }, []);
+
+  // Cerrar modal
+  const closeModal = useCallback(() => {
+    setSelected(null);
+    document.body.style.overflow = '';
+  }, []);
+
+  // Navegar entre imágenes
+  const showPrev = () => {
+    if (selected === null) return;
+    setSelected((selected + images.length - 1) % images.length);
+  };
+  const showNext = () => {
+    if (selected === null) return;
+    setSelected((selected + 1) % images.length);
+  };
+
   return (
     <>
-      <div className=" xl:block hidden group relative w-full sm:w-80 md:w-72 hover:bg-black bg-transparent rounded-lg overflow-hidden shadow-lg transition-shadow duration-300 hover:shadow-2xl ">
+      {/* CARD Desktop */}
+      <div className="xl:block hidden group relative w-full sm:w-80 md:w-72 rounded-lg overflow-hidden shadow-lg transition-shadow hover:shadow-2xl">
         <div className="relative w-full h-48 sm:h-56 md:h-64">
           <Image
-            src={imageSrc}
-            alt={alt}
+            src={images[0].SrcI}
+            alt={alt || images[0].AltI}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105" />
+            className="object-cover transition-transform group-hover:scale-105"
+          />
         </div>
-        <div className=" absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity" />
         <div className="absolute inset-0 flex flex-col justify-end p-4 space-y-2">
-          <h3 className=" text-lg font-semibold text-transparent group-hover:text-white transition-colors duration-300">
+          <h3 className="text-lg font-semibold text-transparent group-hover:text-white">
             {title}
           </h3>
-          <p className=" text-sm text-transparent group-hover:text-white transition-colors duration-300 line-clamp-2">
+          <p className="text-sm text-transparent group-hover:text-white line-clamp-2">
             {Sdescription}
           </p>
-          <p className=" text-xs font-light text-transparent group-hover:text-white transition-colors duration-300">
-            {counts} {counts === 1 ? 'Foto' : 'Fotos'}
-          </p>
-          <Link
-            href={srcLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 w-full text-center bg-white text-black py-2 rounded opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-colors duration-300 hover:bg-black hover:text-white">
+          <button
+            onClick={() => openModal(0)}
+            className="mt-2 w-full text-center bg-white text-black py-2 rounded transition hover:bg-black hover:text-white group-hover:visible invisible">
             Ver Proyecto
-          </Link>
+          </button>
         </div>
       </div>
-      <div className="xl:hidden group relative w-full max-w-xs bg-white rounded-lg overflow-hidden shadow-lg transition-shadow duration-300 hover:shadow-2xl">
-        <div className="relative w-full h-48 overflow-hidden">
+
+      {/* CARD Mobile */}
+      <div className="xl:hidden group relative w-full max-w-xs bg-white rounded-lg overflow-hidden shadow-lg transition-shadow hover:shadow-2xl">
+        <div className="relative w-full h-48">
           <Image
-            src={imageSrc}
-            alt={alt}
+            src={images[0].SrcI}
+            alt={alt || images[0].AltI}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105" />
-          <div className="absolute inset-0 bg-black opacity-0 md:group-hover:opacity-50 transition-opacity duration-300" />
+            className="object-cover transition-transform group-hover:scale-105"
+          />
         </div>
         <div className="p-4 flex flex-col space-y-2">
-          <h3 className="text-lg font-semibold text-black md:group-hover:text-white transition-colors duration-300">
+          <h3 className="text-lg font-semibold text-black">
             {title}
           </h3>
-          <p className="text-sm text-gray-700 md:group-hover:text-white transition-colors duration-300 line-clamp-2">
+          <p className="text-sm text-gray-700 line-clamp-2">
             {Sdescription}
           </p>
-
-          <p className="text-xs font-light text-gray-600 md:group-hover:text-white transition-colors duration-300">
-            {counts} {counts === 1 ? 'Foto' : 'Fotos'}
-          </p>
-          <Link
-            href={srcLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-auto block w-full text-center bg-black text-white py-2 rounded transition-opacity duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 hover:bg-gray-800">
+          <button
+            onClick={() => openModal(0)}
+            className="mt-auto block w-full text-center bg-black text-white py-2 rounded hover:bg-gray-800">
             Ver Proyecto
-          </Link>
+          </button>
         </div>
       </div>
-    </>
-  )
-};
 
-export default ImageCard;
+      {/* MODAL GALLERY */}
+      {selected !== null && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
+          onClick={closeModal}
+        >
+          <div
+            className="relative max-w-[90vw] max-h-[90vh] overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close */}
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-15 z-50 text-white bg-black/50 p-2 rounded-full hover:bg-black"
+            >
+              <FaTimes size={20} />
+            </button>
+
+            {/* Prev */}
+            <button
+              onClick={(e) => { e.stopPropagation(); showPrev(); }}
+              className="absolute left-15 top-1/2 z-50 text-white bg-black/30 p-2 rounded-full hover:bg-black"
+            >
+              <FaChevronLeft size={24} />
+            </button>
+
+            {/* Next */}
+            <button
+              onClick={(e) => { e.stopPropagation(); showNext(); }}
+              className="absolute right-15 top-1/2 z-50 text-white bg-black/30 p-2 rounded-full hover:bg-black"
+            >
+              <FaChevronRight size={24} />
+            </button>
+
+            {/* Imagen */}
+            <div className="w-4xl h-[30rem] flex items-center justify-center">
+              <Image
+                src={images[selected].SrcI}
+                alt={images[selected].AltI}
+                width={800}
+                height={600}
+                className="object-contain"
+              />
+            </div>
+            {/* Botón dinámico */}
+            <div className="mt-4 text-center">
+              <Link
+                href={dynamicRoute}
+                className="inline-block bg-black text-gray-200 py-2 px-4 rounded hover:text-black hover:bg-gray-200">
+                Ir al detalle del proyecto
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      )}
+    </>
+  );
+};

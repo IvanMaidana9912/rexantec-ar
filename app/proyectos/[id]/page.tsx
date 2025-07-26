@@ -26,7 +26,7 @@ export default function ProyectPage() {
                     <div className="bg-white lg:mx-8 lg:flex lg:max-w-5xl lg:shadow-lg rounded-lg">
                         <div className="flex justify-center lg:w-1/2">
                             <div className="flex justify-center bg-cover rounded-b-none border lg:rounded-lg">
-                                <Image width={1900} height={1900} className="object-cover" src={card.IMG} alt={card.title} />
+                                <Image width={1900} height={1900} className="object-cover" src={card.images[0]} alt={card.title} />
                             </div>
                         </div>
                         <div className="flow-root sm:contents md:contents lg:flow-root py-12 lg:px-12 max-w-xl lg:max-w-5xl lg:w-1/2 rounded-t-none lg:rounded-lg">

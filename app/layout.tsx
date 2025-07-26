@@ -74,10 +74,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout(props: {
-  children: React.ReactNode;
-  modal: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   const updatedTimestamp = Math.floor(Date.now() / 1000);
 
   return (
@@ -135,9 +132,7 @@ export default function RootLayout(props: {
         </noscript>
         <CatchAllErrors>
           <ClientAOS />
-          {props.children}
-          {props.modal}
-          <div id="modal-products" />
+          {children}
         </CatchAllErrors>
       </body>
     </html>
